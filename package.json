@@ -19,9 +19,12 @@
 		"@framer/colebemis.feather-icons": "^1.2.0",
 		"@framer/davo.airtable-sync": "^1.11.0",
 		"@framer/djfumberger.mockmatic": "^1.14.0",
+		"@framer/edoardo.ios-kit": "^1.6.0",
 		"@framer/guischneider.page-indicators": "^1.1.0",
 		"@framer/hjotar.browser-x-kit": "^1.2.0",
 		"@framer/ismael.areas": "^1.1.0",
+		"@framer/jordanframer.font-files": "^1.14.0",
+		"@framer/lintonye.parallax": "^1.50.0",
 		"@framer/perrysmotors.sticky-headers": "^2.3.0"
 	}
 }

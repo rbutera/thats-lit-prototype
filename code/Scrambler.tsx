@@ -5,30 +5,32 @@ import { Frame, addPropertyControls, ControlType } from "framer"
 // Learn more: https://framer.com/api
 
 export function Scrambler(props) {
-    const { text, tint, ...rest } = props
+    const { options, ...rest } = props
+
+    const currentOption = options[0]
 
     return (
         <Frame
             {...rest}
-            background={tint}
-            whileHover={{
-                scale: 1.1,
-            }}
+            // whileHover={{
+            //     scale: 1.1,
+            // }}
             style={{
-                color: "#fff",
                 fontSize: 16,
                 fontWeight: 600,
+                background: "rgba(0,0,0,0)",
+                textAlign: "left",
             }}
         >
-            {text}
+            A {currentOption} of {}
         </Frame>
     )
 }
 
 Scrambler.defaultProps = {
-    height: 128,
-    width: 240,
-    text: "Get started!",
+    height: "auto",
+    width: "auto",
+    text: "Get stasfdsfsfrted!",
     tint: "#0099ff",
 }
 
@@ -37,11 +39,18 @@ addPropertyControls(Scrambler, {
     text: {
         title: "Text",
         type: ControlType.String,
-        defaultValue: "Hello Framer!",
+        defaultValue: "Hello Frsssamer!",
     },
     tint: {
         title: "Tint",
         type: ControlType.Color,
         defaultValue: "#0099ff",
+    },
+    options: {
+        type: ControlType.Array,
+        propertyControl: {
+            type: ControlType.String,
+            title: "Lorem ipsum",
+        },
     },
 })
