@@ -34,7 +34,15 @@ export function HeaderStickiness(): Override {
 export function MenuButtonStickToTop(): Override {
   const { scrollY } = useScroll()
   const y = useSticky(scrollY, [0, 9999999999])
-  return { y }
+  const opacity = useTransform(scrollY, [0, 50], [1, 0])
+  return { y, opacity }
+}
+
+export function LightMenuButton(): Override {
+  const { scrollY } = useScroll()
+  const y = useSticky(scrollY, [0, 9999999999])
+  const opacity = useTransform(scrollY, [0, 50], [0, 1])
+  return { y, opacity }
 }
 export function StickySubheading(): Override {
   // scrollY here is a MotionValue

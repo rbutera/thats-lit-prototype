@@ -79,11 +79,12 @@ const Caption = styled.div`
   /* background: rgba(0, 0, 0, 0.3); */
   color: white;
   margin: 0;
-  width: auto;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
+  text-align: right;
   justify-content: flex-start;
-  padding: 16pt;
+  padding: 8pt;
   /* border-radius: 0 0 8pt 8pt; */
 `
 
@@ -110,7 +111,7 @@ const CardContent = styled.div`
   position: relative;
   z-index: 3;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   justify-content: flex-start;
   margin: 0 0 8pt 0;
 `
@@ -128,7 +129,7 @@ const CardPostProcessing = styled.div`
   mix-blend-mode: hard-light;
   opacity: 0.5;
   background: linear-gradient(
-    to top,
+    to bottom,
     hsla(0, 0%, 0%, 0) 0%,
     hsla(0, 0%, 0%, 0.013) 8.1%,
     hsla(0, 0%, 0%, 0.049) 15.5%,
