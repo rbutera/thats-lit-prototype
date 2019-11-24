@@ -22,10 +22,13 @@ export function HeaderStickiness(): Override {
   const { scrollY } = useScroll()
   // y is a MotionValue too
   const y = useSticky(scrollY, [0, 999999])
-  const height = useTransform(scrollY, [0, 130], [280, 69])
+  const height = useTransform(scrollY, [0, 130], [280, 72])
+  const width = useTransform(scrollY, [0, 130], [375, 200])
+  const borderRadius = useTransform(scrollY, [0, 130], [0, 4])
+  const marginTop = useTransform(scrollY, [0, 130], [0, 4])
   // This is short for { y: y }, where the first "y" is the property key, the second "y"
   // is the variable name.
-  return { y, height }
+  return { y, height, width, borderRadius, marginTop }
 }
 
 export function MenuButtonStickToTop(): Override {
@@ -37,7 +40,7 @@ export function StickySubheading(): Override {
   // scrollY here is a MotionValue
   const { scrollY } = useScroll()
   // y is a MotionValue too
-  const y = useSticky(scrollY, [220, 1340])
+  const y = useSticky(scrollY, [235, 1340])
   const opacity = useTransform(scrollY, [1345, 1360], [1, 0])
 
   // This is short for { y: y }, where the first "y" is the property key, the second "y"
@@ -83,18 +86,18 @@ export function TopFade(): Override {
 }
 export function SubtitleHideOnScroll(): Override {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [50, 100], [1, 0])
-  const x = useTransform(scrollY, [25, 100], [0, -100])
-  return { opacity, x }
+  const opacity = useTransform(scrollY, [25, 50], [1, 0])
+
+  return { opacity }
 }
 
 export function ShrinkOnScroll(): Override {
   // scrollY here is a MotionValue
   const { scrollY } = useScroll()
   // y is a MotionValue too
-  const left = useTransform(scrollY, [0, 150], [10, -38])
-  const scale = useTransform(scrollY, [0, 150], [1, 0.5])
-  const y = useSticky(scrollY, [100, 999999])
+  const left = useTransform(scrollY, [0, 125], [180, 100])
+  const scale = useTransform(scrollY, [0, 125], [1, 0.5])
+  const y = useSticky(scrollY, [125, 999999])
   console.log("scrollY:", scrollY)
   console.log("y:", y)
 

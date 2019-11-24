@@ -17,6 +17,7 @@ const RecCard = styled.div`
   overflow: hidden;
   position: relative;
   margin-bottom: 8pt;
+  box-shadow: 2pt 2pt 4pt rgba(0, 0, 0, 0.2);
 `
 
 const CardHeader = styled.div`
