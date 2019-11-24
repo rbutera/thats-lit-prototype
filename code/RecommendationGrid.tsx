@@ -5,47 +5,28 @@ import {
   Stack,
   StackProperties,
   PropertyControls
-} from "framer";
-import * as React from "react";
-import { useAirTable } from "./useAirtable";
-import { showInstructions } from "./utils";
+} from "framer"
+import * as React from "react"
+import { useAirTable, normalizeFields } from "./useAirtable"
+import { showInstructions } from "./utils"
 
 RecGrid.defaultProps = {
   width: 375,
   height: 810,
   direction: "vertical" as "vertical",
   onItemTapped: () => {}
-};
+}
 
 export type Props = {
-  component: any;
-  width?: number;
-  height?: number;
-  url: string;
-  imageSize: string;
+  component: any
+  width?: number
+  height?: number
+  url: string
+  imageSize: string
 
-  expandChildren: boolean;
-  onItemTapped: (index: number, record: any) => void;
-} & StackProperties;
-
-// converts Airtable fields to a format that Framer understands
-const normalizeFields = (fields: any, imageSize: string) => {
-  const result = {};
-
-  for (const key of Object.keys(fields)) {
-    const value = fields[key];
-    // string fields are passed as-is
-    if (typeof value === "string") {
-      result[key] = value;
-    }
-    // if there is a photo field, extract the first photo's URL
-    if (Array.isArray(value) && value.length > 0 && !!value[0].thumbnails) {
-      result[key] = value[0]["thumbnails"][imageSize]["url"];
-    }
-  }
-
-  return result;
-};
+  expandChildren: boolean
+  onItemTapped: (index: number, record: any) => void
+} & StackProperties
 
 export function RecGrid({
   component,
@@ -66,11 +47,11 @@ export function RecGrid({
   alignment,
   expandChildren
 }: Props) {
-  const items = useAirTable(url);
+  const items = useAirTable(url)
 
-  const instructions = showInstructions(url, component);
+  const instructions = showInstructions(url, component)
   if (instructions) {
-    return instructions;
+    return instructions
   }
 
   return (
@@ -88,28 +69,28 @@ export function RecGrid({
       alignment={alignment}
     >
       {items.map((record, index) => {
-        const { fields } = record;
+        const { fields } = record
 
-        const sizing = {};
+        const sizing = {}
 
         const ItemComponent = React.cloneElement(component[0], {
           key: index,
           ...sizing,
           onTap: () => {
-            onItemTapped(index, record);
+            onItemTapped(index, record)
           },
           ...normalizeFields(fields, imageSize)
-        });
+        })
 
-        return ItemComponent;
+        return ItemComponent
       })}
     </Stack>
-  );
+  )
 }
 
 const stackProps =
   // @ts-ignore
-  Stack.propertyControls;
+  Stack.propertyControls
 
 export const airtablePropertyControls: PropertyControls<Props> = {
   //ControlType.String is displayed as an input field with an optional placeholder value
@@ -155,6 +136,6 @@ export const airtablePropertyControls: PropertyControls<Props> = {
     ...stackProps.alignment,
     hidden: props => props.expandChildren
   }
-};
+}
 
-addPropertyControls(RecGrid, airtablePropertyControls);
+addPropertyControls(RecGrid, airtablePropertyControls)

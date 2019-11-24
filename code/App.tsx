@@ -28,5 +28,9 @@ export function RotateFrame(props): Override {
 }
 
 export function TextElement(props): Override {
-    console.log(props)
+    // console.log("appState.taps: ", appState.taps)
+    return {
+        textTransform: "uppercase",
+        text: appState.taps,
+    }
 }

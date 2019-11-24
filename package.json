@@ -25,6 +25,8 @@
 		"@framer/ismael.areas": "^1.1.0",
 		"@framer/jordanframer.font-files": "^1.14.0",
 		"@framer/lintonye.parallax": "^1.50.0",
-		"@framer/perrysmotors.sticky-headers": "^2.3.0"
+		"@framer/perrysmotors.sticky-headers": "^2.3.0",
+		"@framer/steveruizok.education": "^1.207.0",
+		"styled-components": "^4.4.1"
 	}
 }
