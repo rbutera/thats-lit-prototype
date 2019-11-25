@@ -1,5 +1,5 @@
 const SOURCE_URL =
-  "https://api.airtable.com/v0/appzWIcmWWhnfUEtf/Prototype?api_key=keyD9WDUfMMgSQkg0&maxRecords=999&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc"
+    "https://api.airtable.com/v0/appzWIcmWWhnfUEtf/Prototype?api_key=keyD9WDUfMMgSQkg0&maxRecords=999&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc"
 
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
@@ -10,17 +10,19 @@ import { Recommendation } from "./Rec"
 import { take } from "ramda"
 
 function normalizeFields(fields) {
-  const { Name, Tagline, Picture, Subcat } = fields
+    const { Name, Tagline, Picture, Subcat } = fields
 
-  const result = {
-    name: Name,
-    tagline: Tagline,
-    category: Subcat,
-    picture:
-      Picture && Picture[0] ? Picture[0]["thumbnails"]["large"]["url"] : "none"
-  }
+    const result = {
+        name: Name,
+        tagline: Tagline,
+        category: Subcat,
+        picture:
+            Picture && Picture[0]
+                ? Picture[0]["thumbnails"]["large"]["url"]
+                : "none",
+    }
 
-  return result
+    return result
 }
 
 const Section = styled.div`
@@ -33,42 +35,42 @@ const Section = styled.div`
 `
 
 export function Subcategory(props) {
-  const { filter = "Productivity" } = props
-  const all = useAirTable(SOURCE_URL)
+    const { filter = "Productivity" } = props
+    const all = useAirTable(SOURCE_URL)
 
-  const items = take(
-    3,
-    all.filter(({ fields }) => fields["Subcat"] === filter)
-  )
+    const items = take(
+        3,
+        all.filter(({ fields }) => fields["Subcat"] === filter)
+    )
 
-  console.log("all is", all)
+    console.log("all is", all)
 
-  return (
-    <Section>
-      {items.map((record, index) => (
-        <Recommendation
-          height={360}
-          key={index}
-          {...normalizeFields(record.fields)}
-        />
-      ))}
-    </Section>
-  )
+    return (
+        <Section>
+            {items.map((record, index) => (
+                <Recommendation
+                    height={375}
+                    key={index}
+                    {...normalizeFields(record.fields)}
+                />
+            ))}
+        </Section>
+    )
 }
 
 Subcategory.defaultProps = {
-  filter: "Productivity"
+    filter: "Productivity",
 }
 
 addPropertyControls(Subcategory, {
-  filter: {
-    name: "Filter",
-    type: ControlType.String,
-    default: "Productivity"
-  },
-  quantity: {
-    name: "Quantity",
-    type: ControlType.Number,
-    default: "3"
-  }
+    filter: {
+        name: "Filter",
+        type: ControlType.String,
+        default: "Productivity",
+    },
+    quantity: {
+        name: "Quantity",
+        type: ControlType.Number,
+        default: "3",
+    },
 })

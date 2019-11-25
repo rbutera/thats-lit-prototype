@@ -37,7 +37,7 @@ export function RecentRecommendations(props) {
     <Section>
       {items.map((record, index) => (
         <Recommendation
-          height={360}
+          height={375}
           key={index}
           {...normalizeFields(record.fields)}
         />

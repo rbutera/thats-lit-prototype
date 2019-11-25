@@ -893,9 +893,9 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : 719,
+            "bottom" : null,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.62778528021607027,
+            "centerAnchorY" : 0.57866306549628632,
             "children" : [
 
             ],
@@ -906,7 +906,7 @@
               "quantity" : 2
             },
             "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
+            "constraintsLocked" : true,
             "deviceType" : null,
             "exportOptions" : [
 
@@ -919,12 +919,12 @@
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
             "fillType" : "color",
-            "height" : 767,
+            "height" : 750,
             "heightType" : 0,
             "id" : "RaKx1_Zl6",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
-            "left" : 8,
+            "left" : 0,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
@@ -938,19 +938,19 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 8,
+            "right" : 0,
             "rotation" : 0,
-            "top" : null,
+            "top" : 1353,
             "visible" : true,
-            "width" : 359,
+            "width" : 375,
             "widthType" : 0
           },
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.51333333333333331,
-            "centerAnchorY" : 0.27819041188386223,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.25962187711006079,
             "children" : [
 
             ],
@@ -976,12 +976,12 @@
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
             "fillType" : "color",
-            "height" : 1104,
+            "height" : 1125,
             "heightType" : 0,
             "id" : "JFJI3Te1O",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
-            "left" : 13,
+            "left" : 0,
             "locked" : false,
             "name" : null,
             "opacity" : 1,
@@ -995,11 +995,11 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 3,
+            "right" : 0,
             "rotation" : 0,
-            "top" : 272,
+            "top" : 228,
             "visible" : true,
-            "width" : 359,
+            "width" : 375,
             "widthType" : 0
           },
           {
@@ -1008,8 +1008,8 @@
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : null,
-            "centerAnchorX" : 0.50266666666666671,
-            "centerAnchorY" : 0.046252532072923701,
+            "centerAnchorX" : 0.51466666666666672,
+            "centerAnchorY" : 0.024983119513841998,
             "children" : [
 
             ],
@@ -1074,7 +1074,7 @@
             "guidesY" : [
 
             ],
-            "height" : 278,
+            "height" : 150,
             "heightType" : 0,
             "id" : "FJOG7sI6r",
             "intrinsicHeight" : null,
@@ -1082,8 +1082,8 @@
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : 1,
-            "locked" : true,
+            "left" : 0,
+            "locked" : false,
             "name" : "Top Fade",
             "navigationTarget" : null,
             "navigationTransition" : "push",
@@ -1101,9 +1101,9 @@
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
             "replicaInfo" : null,
-            "right" : -1,
+            "right" : 0,
             "rotation" : 0,
-            "top" : -2,
+            "top" : 0,
             "visible" : true,
             "width" : 375,
             "widthType" : 0
@@ -1207,6 +1207,235 @@
             "right" : 0,
             "rotation" : 0,
             "top" : -1,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : -266,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.89989871708305202,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/subcategory.tsx_Subcategory",
+            "codeComponentProps" : {
+              "filter" : "Web Development",
+              "quantity" : 3
+            },
+            "codeOverrideEnabled" : false,
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 1125,
+            "heightType" : 0,
+            "id" : "p28ryCppz",
+            "intrinsicHeight" : null,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "RhuOV1VYa",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : null,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : 839,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.71033085752869685,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/SectionHeader.tsx_SectionHeader",
+            "codeComponentProps" : {
+              "text" : "Web Development",
+              "tint" : "hsl(165, 94%, 69%)"
+            },
+            "codeOverrideEnabled" : true,
+            "codeOverrideFile" : ".\/TopHeader.tsx",
+            "codeOverrideIdentifier" : ".\/TopHeader.tsx_StickySubheading3",
+            "codeOverrideName" : "StickySubheading3",
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 38,
+            "heightType" : 0,
+            "id" : "RCwdpQk3I",
+            "intrinsicHeight" : 64,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "RhuOV1VYa",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : null,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.45712356515867658,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/SectionHeader.tsx_SectionHeader",
+            "codeComponentProps" : {
+              "text" : "Motivation",
+              "tint" : "hsl(304, 94%, 69%)"
+            },
+            "codeOverrideEnabled" : true,
+            "codeOverrideFile" : ".\/TopHeader.tsx",
+            "codeOverrideIdentifier" : ".\/TopHeader.tsx_StickySubheading2",
+            "codeOverrideName" : "StickySubheading2",
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 38,
+            "heightType" : 0,
+            "id" : "BNohu1y_W",
+            "intrinsicHeight" : 64,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "RhuOV1VYa",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 1335,
+            "visible" : true,
+            "width" : 375,
+            "widthType" : 0
+          },
+          {
+            "__class" : "CodeComponentNode",
+            "aspectRatio" : null,
+            "bottom" : null,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.077312626603646184,
+            "children" : [
+
+            ],
+            "clip" : true,
+            "codeComponentIdentifier" : ".\/SectionHeader.tsx_SectionHeader",
+            "codeComponentProps" : {
+              "text" : "Recently Added",
+              "tint" : "rgba(255, 195, 56, 1.00)"
+            },
+            "codeOverrideEnabled" : true,
+            "codeOverrideFile" : ".\/TopHeader.tsx",
+            "codeOverrideIdentifier" : ".\/TopHeader.tsx_StickySubheading",
+            "codeOverrideName" : "StickySubheading",
+            "constraintsLocked" : false,
+            "deviceType" : null,
+            "exportOptions" : [
+
+            ],
+            "fillColor" : "rgba(255,255,255,1)",
+            "fillEnabled" : false,
+            "fillImage" : null,
+            "fillImageOriginalName" : null,
+            "fillImagePixelHeight" : null,
+            "fillImagePixelWidth" : null,
+            "fillImageResize" : "fill",
+            "fillType" : "color",
+            "height" : 38,
+            "heightType" : 0,
+            "id" : "Feit8tq7U",
+            "intrinsicHeight" : 64,
+            "intrinsicWidth" : null,
+            "left" : 0,
+            "locked" : false,
+            "name" : null,
+            "opacity" : 1,
+            "originalid" : null,
+            "parentid" : "RhuOV1VYa",
+            "previewSettings" : null,
+            "radius" : 0,
+            "radiusBottomLeft" : 0,
+            "radiusBottomRight" : 0,
+            "radiusIsRelative" : false,
+            "radiusPerCorner" : false,
+            "radiusTopLeft" : 0,
+            "radiusTopRight" : 0,
+            "right" : 0,
+            "rotation" : 0,
+            "top" : 210,
             "visible" : true,
             "width" : 375,
             "widthType" : 0
@@ -1406,122 +1635,6 @@
             "top" : 156,
             "visible" : true,
             "width" : 218,
-            "widthType" : 0
-          },
-          {
-            "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
-            "bottom" : null,
-            "centerAnchorX" : 0.48799999999999999,
-            "centerAnchorY" : 0.076975016880486163,
-            "children" : [
-
-            ],
-            "clip" : true,
-            "codeComponentIdentifier" : ".\/SectionHeader.tsx_SectionHeader",
-            "codeComponentProps" : {
-              "text" : "Recently Added",
-              "tint" : "rgba(255, 195, 56, 1.00)"
-            },
-            "codeOverrideEnabled" : true,
-            "codeOverrideFile" : ".\/TopHeader.tsx",
-            "codeOverrideIdentifier" : ".\/TopHeader.tsx_StickySubheading",
-            "codeOverrideName" : "StickySubheading",
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImageOriginalName" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "height" : 64,
-            "heightType" : 0,
-            "id" : "Feit8tq7U",
-            "intrinsicHeight" : 64,
-            "intrinsicWidth" : null,
-            "left" : 12,
-            "locked" : false,
-            "name" : null,
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "RhuOV1VYa",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "right" : 21,
-            "rotation" : 0,
-            "top" : 196,
-            "visible" : true,
-            "width" : 342,
-            "widthType" : 0
-          },
-          {
-            "__class" : "CodeComponentNode",
-            "aspectRatio" : null,
-            "bottom" : null,
-            "centerAnchorX" : 0.51733333333333331,
-            "centerAnchorY" : 0.48345712356515869,
-            "children" : [
-
-            ],
-            "clip" : true,
-            "codeComponentIdentifier" : ".\/SectionHeader.tsx_SectionHeader",
-            "codeComponentProps" : {
-              "text" : "#Motivation",
-              "tint" : "hsl(299, 100%, 85%)"
-            },
-            "codeOverrideEnabled" : true,
-            "codeOverrideFile" : ".\/TopHeader.tsx",
-            "codeOverrideIdentifier" : ".\/TopHeader.tsx_StickySubheading2",
-            "codeOverrideName" : "StickySubheading2",
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImageOriginalName" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "height" : 64,
-            "heightType" : 0,
-            "id" : "p8tYpn3I1",
-            "intrinsicHeight" : 64,
-            "intrinsicWidth" : null,
-            "left" : 12,
-            "locked" : false,
-            "name" : null,
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "RhuOV1VYa",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "right" : 10,
-            "rotation" : 0,
-            "top" : 1400,
-            "visible" : true,
-            "width" : 342,
             "widthType" : 0
           },
           {
@@ -3215,8 +3328,8 @@
             "clip" : false,
             "codeOverrideEnabled" : true,
             "codeOverrideFile" : ".\/TopHeader.tsx",
-            "codeOverrideIdentifier" : ".\/TopHeader.tsx_MenuButtonStickToTop",
-            "codeOverrideName" : "MenuButtonStickToTop",
+            "codeOverrideIdentifier" : ".\/TopHeader.tsx_DarkMenuButton",
+            "codeOverrideName" : "DarkMenuButton",
             "constraintsLocked" : false,
             "deviceType" : null,
             "exportOptions" : [
@@ -4206,9 +4319,9 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : 83,
+            "bottom" : 84,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.50677339901477836,
+            "centerAnchorY" : 0.50554187192118227,
             "children" : [
 
             ],
@@ -4262,7 +4375,7 @@
             "radiusTopRight" : 0,
             "right" : 0,
             "rotation" : 0,
-            "top" : 94,
+            "top" : 93,
             "visible" : true,
             "width" : 375,
             "widthType" : 0
@@ -5784,161 +5897,6 @@
         "top" : 2174,
         "visible" : true,
         "width" : 200,
-        "widthType" : 0
-      },
-      {
-        "__class" : "FrameNode",
-        "aspectRatio" : null,
-        "blendingEnabled" : 0,
-        "blendingMode" : "normal",
-        "bottom" : null,
-        "centerAnchorX" : 0.062666666666666662,
-        "centerAnchorY" : 0.53966914247130315,
-        "children" : [
-
-        ],
-        "clip" : false,
-        "codeOverrideEnabled" : true,
-        "codeOverrideFile" : ".\/TopHeader.tsx",
-        "codeOverrideIdentifier" : ".\/TopHeader.tsx_StickySubheading2",
-        "codeOverrideName" : "StickySubheading2",
-        "constraintsLocked" : false,
-        "deviceType" : null,
-        "exportOptions" : [
-
-        ],
-        "fillColor" : "#1e1e1e",
-        "fillEnabled" : true,
-        "fillImage" : null,
-        "fillImageOriginalName" : null,
-        "fillImagePixelHeight" : null,
-        "fillImagePixelWidth" : null,
-        "fillImageResize" : "fill",
-        "fillType" : "color",
-        "guidesX" : [
-
-        ],
-        "guidesY" : [
-
-        ],
-        "height" : 49,
-        "heightType" : 0,
-        "id" : "S7m0XO11E",
-        "intrinsicHeight" : null,
-        "intrinsicWidth" : null,
-        "isExternalMaster" : null,
-        "isMaster" : false,
-        "isTarget" : false,
-        "left" : -1884,
-        "locked" : false,
-        "name" : "Section Header",
-        "navigationTarget" : null,
-        "navigationTransition" : "push",
-        "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-        "navigationTransitionDirection" : "left",
-        "opacity" : 1,
-        "originalid" : "pSnwVJbu6",
-        "parentid" : "JTeQ_zuL6",
-        "previewSettings" : null,
-        "radius" : 10,
-        "radiusBottomLeft" : 10,
-        "radiusBottomRight" : 10,
-        "radiusIsRelative" : false,
-        "radiusPerCorner" : false,
-        "radiusTopLeft" : 10,
-        "radiusTopRight" : 10,
-        "replicaInfo" : {
-          "master" : "pSnwVJbu6",
-          "overrides" : {
-            "lwujSQBVZ" : {
-              "centerAnchorY" : 0.75789473684210529,
-              "styledText" : {
-                "__class" : "StyledTextDraft",
-                "blocks" : [
-                  {
-                    "data" : {
-                      "emptyStyle" : [
-                        "FONT:AktivGrotesk-Bold",
-                        "LINEHEIGHT:0.85",
-                        "LETTERSPACING:-1",
-                        "ALIGN:left",
-                        "SIZE:29",
-                        "COLOR:hsl(299, 100%, 67%)"
-                      ]
-                    },
-                    "depth" : 0,
-                    "entityRanges" : [
-
-                    ],
-                    "inlineStyleRanges" : [
-                      {
-                        "length" : 12,
-                        "offset" : 0,
-                        "style" : "FONT:AktivGrotesk-Bold"
-                      },
-                      {
-                        "length" : 12,
-                        "offset" : 0,
-                        "style" : "LINEHEIGHT:0.85"
-                      },
-                      {
-                        "length" : 12,
-                        "offset" : 0,
-                        "style" : "LETTERSPACING:-1"
-                      },
-                      {
-                        "length" : 12,
-                        "offset" : 0,
-                        "style" : "ALIGN:left"
-                      },
-                      {
-                        "length" : 12,
-                        "offset" : 0,
-                        "style" : "SIZE:29"
-                      },
-                      {
-                        "length" : 12,
-                        "offset" : 0,
-                        "style" : "COLOR:hsl(299, 100%, 67%)"
-                      }
-                    ],
-                    "key" : "5dsp0",
-                    "text" : "#Development",
-                    "type" : "unstyled"
-                  }
-                ],
-                "cached" : {
-                  "html" : "<div class='DraftEditor-alignLeft'><div data-offset-key=\"5dsp0-0-0\" class=\"public-DraftStyleDefault-block public-DraftStyleDefault-ltr\"><span data-offset-key=\"5dsp0-0-0\" style=\"tab-size:4;font-family:&quot;AktivGrotesk-Bold&quot;, &quot;Aktiv Grotesk&quot;, serif;-webkit-text-fill-color:hsl(299, 100%, 67%);font-size:29px;letter-spacing:-1px;line-height:0.85;font-weight:700\"><span data-text=\"true\">#Development<\/span><\/span><\/div><\/div>",
-                  "os" : "macos 10_14 framerx",
-                  "size" : {
-                    "height" : 24,
-                    "width" : 191
-                  },
-                  "width" : 0
-                },
-                "entityMap" : {
-
-                }
-              },
-              "width" : 191
-            },
-            "pSnwVJbu6" : {
-              "bottom" : null,
-              "centerAnchorX" : 0.062666666666666662,
-              "centerAnchorY" : 0.53966914247130315,
-              "codeOverrideIdentifier" : ".\/TopHeader.tsx_StickySubheading2",
-              "codeOverrideName" : "StickySubheading2",
-              "left" : -1884,
-              "right" : null,
-              "top" : 2905
-            }
-          }
-        },
-        "right" : null,
-        "rotation" : 0,
-        "top" : 2905,
-        "visible" : true,
-        "width" : 241,
         "widthType" : 0
       },
       {

@@ -17,25 +17,49 @@ export function AlwaysSticky(): Override {
     }
 }
 
-export function MenuButtonStickToTop(): Override {
+const MENU_GONE_BREAKPOINT = 220
+
+export function DarkMenuButton(): Override {
     const { scrollY } = useScroll()
     const y = useSticky(scrollY, [0, 9999999999])
-    const opacity = useTransform(scrollY, [0, 50], [1, 0])
+    const opacity = useTransform(
+        scrollY,
+        [MENU_GONE_BREAKPOINT - 20, MENU_GONE_BREAKPOINT + 20],
+        [1, 0]
+    )
     return { y, opacity }
 }
 
 export function LightMenuButton(): Override {
     const { scrollY } = useScroll()
     const y = useSticky(scrollY, [0, 9999999999])
-    const opacity = useTransform(scrollY, [0, 50], [0, 1])
+    const opacity = useTransform(
+        scrollY,
+        [MENU_GONE_BREAKPOINT - 20, MENU_GONE_BREAKPOINT + 20],
+        [0, 1]
+    )
     return { y, opacity }
 }
+
+const FIRST_HEADING_Y = 140
+const FIRST_SECTION_HEIGHT = 1125
+const END_OF_FIRST_SECTION = FIRST_HEADING_Y + FIRST_SECTION_HEIGHT
+const SECOND_HEADING_Y = END_OF_FIRST_SECTION
+const SECOND_SECTION_HEIGHT = 750
+const END_OF_SECOND_SECTION = END_OF_FIRST_SECTION + SECOND_SECTION_HEIGHT
+const THIRD_HEADING_Y = END_OF_SECOND_SECTION
+const THIRD_SECTION_HEIGHT = 1125
+const END_OF_THIRD_SECTION = END_OF_SECOND_SECTION + THIRD_SECTION_HEIGHT
+
 export function StickySubheading(): Override {
     // scrollY here is a MotionValue
     const { scrollY } = useScroll()
     // y is a MotionValue too
-    const y = useSticky(scrollY, [144, 1240])
-    const opacity = useTransform(scrollY, [1245, 1260], [1, 0])
+    const y = useSticky(scrollY, [
+        FIRST_HEADING_Y,
+        FIRST_HEADING_Y + FIRST_SECTION_HEIGHT - 100,
+    ])
+    const opacity = useTransform(scrollY, [0, 100], [1, 0])
 
     // This is short for { y: y }, where the first "y" is the property key, the second "y"
     // is the variable name.
@@ -45,7 +69,25 @@ export function StickySubheading(): Override {
 export function StickySubheading2(): Override {
     const { scrollY } = useScroll()
     const opacity = useTransform(scrollY, [1100, 1310], [0.5, 1])
-    const y = useSticky(scrollY, [1345, 999999])
+    const y = useSticky(scrollY, [
+        END_OF_FIRST_SECTION,
+        END_OF_SECOND_SECTION - 50,
+    ])
+
+    // This is short for { y: y }, where the first "y" is the property key, the second "y"
+    // is the variable name.
+    // return { y }
+    return { y, opacity }
+}
+
+export function StickySubheading3(): Override {
+    const { scrollY } = useScroll()
+    const opacity = useTransform(
+        scrollY,
+        [END_OF_SECOND_SECTION - 100, END_OF_SECOND_SECTION],
+        [0.5, 1]
+    )
+    const y = useSticky(scrollY, [END_OF_SECOND_SECTION, END_OF_THIRD_SECTION])
 
     // This is short for { y: y }, where the first "y" is the property key, the second "y"
     // is the variable name.
@@ -82,8 +124,8 @@ export function DarkLogo(): Override {
     const color = useTransform(scrollY, [100, 200], ["#1a1a1a", "#1a1a1a"])
     const background = useTransform(
         scrollY,
-        [100, 200],
-        ["rgba(0, 0, 0, 0)", "rgba(200, 200, 200, 1)"]
+        [100, 210],
+        ["rgba(245, 245, 245, 0)", "rgba(245, 245, 245, 1)"]
     )
 
     // This is short for { y: y }, where the first "y" is the property key, the second "y"

@@ -13,10 +13,10 @@ const RecCard = styled.div`
   width: 100%;
   height: ${props => props.height};
   color: white;
-  border-radius: 8pt;
+  // border-radius: 8pt;
   // overflow: hidden;
   position: relative;
-  margin-bottom: 8pt;
+  // margin-bottom: 8pt;
   box-shadow: 2pt 2pt 4pt rgba(0, 0, 0, 0.2);
 `
 
@@ -29,7 +29,7 @@ const CardHeader = styled.div`
 
 const CardFooter = styled.div`
   display: flex;
-  padding: 8pt;
+  padding: 16pt;
   justify-content: flex-end;
   margin: 0;
   width: 100%;
@@ -72,7 +72,7 @@ const CaptionBubble = styled.div`
   display: flex;
   flex-direction: column;
   /* border-radius: 0 0 8pt 8pt; */
-  border-radius: 0 8pt;
+  // border-radius: 0 8pt;
 `
 
 const Caption = styled.div`
@@ -120,7 +120,7 @@ const CardContent = styled.div`
 
 const CardPostProcessing = styled.div`
   width: 100%;
-  height: 20%;
+  height: 33%;
   display: block;
   position: absolute;
   z-index: 4;
@@ -150,7 +150,7 @@ const CardPostProcessing = styled.div`
   );
 };
   z-index: 2;
-  border-radius: 8pt;
+  // border-radius: 8pt;
   height: ${({ height }) => height};
 `
 

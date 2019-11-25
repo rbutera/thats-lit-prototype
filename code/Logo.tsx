@@ -8,9 +8,26 @@ import styled from "styled-components"
 
 const StyledLogo = styled.svg`
   display: block;
+
   & path {
     fill: ${props => props.fill};
   }
+`
+
+const TextEffects = styled.h1`
+  display: inline-block;
+  border-radius: "2pt";
+  font-family: "Aktiv Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: "bold";
+  /* line-height: 1rem; */
+  margin: 0;
+  padding: 0;
+  position: relative;
+  left: -5px;
+  top: 0;
+  text-align: center;
+  vertical-align: middle;
 `
 
 export function Logo(props) {
@@ -26,13 +43,14 @@ export function Logo(props) {
       opacity={opacity}
       color={color}
       style={{
-        borderRadius: "2pt",
-        fontFamily: "Aktiv Grotesk",
-        fontSize: "3.9rem",
-        fontWeight: "bold"
+        fontSize: "1.8rem",
+        display: "flex",
+        margin: 0,
+        padding: 0,
+        flexDirection: "column"
       }}
     >
-      That's Lit!
+      <TextEffects>That's Lit!</TextEffects>
     </Frame>
   )
 }
