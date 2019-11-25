@@ -95,8 +95,10 @@ const Name = styled.div`
   /* text-transform: uppercase; */
   /* letter-spacing: 3pt; */
   font-family: "Aktiv Grotesk";
-  letter-spacing: -1pt;
-  text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.3);
+
+  letter-spacing: 0pt;
+  text-align: right;
+  text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.2);
 `
 
 const Tagline = styled.div`

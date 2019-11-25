@@ -1,5 +1,5 @@
 const SOURCE_URL =
-  "https://api.airtable.com/v0/appzWIcmWWhnfUEtf/Prototype?api_key=keyD9WDUfMMgSQkg0&maxRecords=3&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc"
+  "https://api.airtable.com/v0/appzWIcmWWhnfUEtf/Prototype?api_key=keyD9WDUfMMgSQkg0&maxRecords=999&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc"
 
 import * as React from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
@@ -7,6 +7,7 @@ import styled from "styled-components"
 
 import { useAirTable } from "./useAirtable"
 import { Recommendation } from "./Rec"
+import { take } from "ramda"
 
 function normalizeFields(fields) {
   const { Name, Tagline, Picture, Subcat } = fields
@@ -15,7 +16,8 @@ function normalizeFields(fields) {
     name: Name,
     tagline: Tagline,
     category: Subcat,
-    picture: Picture[0]["thumbnails"]["large"]["url"]
+    picture:
+      Picture && Picture[0] ? Picture[0]["thumbnails"]["large"]["url"] : "none"
   }
 
   return result
@@ -30,8 +32,16 @@ const Section = styled.div`
   align-items: center;
 `
 
-export function RecentRecommendations(props) {
-  const items = useAirTable(SOURCE_URL)
+export function Subcategory(props) {
+  const { filter = "Productivity" } = props
+  const all = useAirTable(SOURCE_URL)
+
+  const items = take(
+    3,
+    all.filter(({ fields }) => fields["Subcat"] === filter)
+  )
+
+  console.log("all is", all)
 
   return (
     <Section>
@@ -45,3 +55,20 @@ export function RecentRecommendations(props) {
     </Section>
   )
 }
+
+Subcategory.defaultProps = {
+  filter: "Productivity"
+}
+
+addPropertyControls(Subcategory, {
+  filter: {
+    name: "Filter",
+    type: ControlType.String,
+    default: "Productivity"
+  },
+  quantity: {
+    name: "Quantity",
+    type: ControlType.Number,
+    default: "3"
+  }
+})
