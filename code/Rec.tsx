@@ -25,6 +25,8 @@ const CardHeader = styled.div`
   /* height: 32px; */
   margin: 0;
   width: 100%;
+  padding-left: 16pt;
+  padding-bottom: 24pt;
 `
 
 const CardFooter = styled.div`
@@ -45,6 +47,8 @@ const Category = styled.div`
   font-size: 10pt;
   letter-spacing: 1pt;
   padding-left: 3pt;
+  padding-top: 3pt;
+  /* padding-top: 3pt; */
 `
 
 const CategoryBubble = styled.div`
@@ -82,9 +86,10 @@ const Caption = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column-reverse;
-  text-align: right;
+  text-align: left;
   justify-content: flex-start;
-  padding: 8pt;
+
+  /* padding: 8pt; */
   /* border-radius: 0 0 8pt 8pt; */
 `
 
@@ -95,9 +100,9 @@ const Name = styled.div`
   /* text-transform: uppercase; */
   /* letter-spacing: 3pt; */
   font-family: "Aktiv Grotesk";
-
+  line-height: 0.8em;
   letter-spacing: 0pt;
-  text-align: right;
+  text-align: left;
   text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.2);
 `
 
@@ -115,20 +120,20 @@ const CardContent = styled.div`
   z-index: 5
   flex-direction: column-reverse;
   justify-content: flex-start;
-  margin: 0 0 8pt 0;
+  margin: 0;
 `
 
 const CardPostProcessing = styled.div`
   width: 100%;
-  height: 33%;
+  height: 375px;
   display: block;
   position: absolute;
   z-index: 4;
   top: 0;
   left: 0;
-  backdrop-filter: contrast(1.2) brightness(0.9);
+  backdrop-filter: contrast(1.1) brightness(0.8);
   mix-blend-mode: hard-light;
-  opacity: 0.5;
+  opacity: 0.75;
   background: linear-gradient(
     to bottom,
     hsla(0, 0%, 0%, 0) 0%,

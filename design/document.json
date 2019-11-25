@@ -1038,7 +1038,7 @@
                 {
                   "__class" : "GradientColorStop",
                   "position" : 0,
-                  "value" : "rgba(20, 20, 20, 1.00)"
+                  "value" : "#000000"
                 },
                 {
                   "__class" : "GradientColorStop",
@@ -1057,7 +1057,7 @@
                 {
                   "__class" : "GradientColorStop",
                   "position" : 0,
-                  "value" : "rgba(20, 20, 20, 1.00)"
+                  "value" : "#000000"
                 },
                 {
                   "__class" : "GradientColorStop",
@@ -1214,9 +1214,9 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : -266,
+            "bottom" : null,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.89989871708305202,
+            "centerAnchorY" : 0.66637500000000005,
             "children" : [
 
             ],
@@ -1227,7 +1227,7 @@
               "quantity" : 3
             },
             "codeOverrideEnabled" : false,
-            "constraintsLocked" : false,
+            "constraintsLocked" : true,
             "deviceType" : null,
             "exportOptions" : [
 
@@ -1269,9 +1269,9 @@
           {
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
-            "bottom" : 839,
+            "bottom" : null,
             "centerAnchorX" : 0.5,
-            "centerAnchorY" : 0.71033085752869685,
+            "centerAnchorY" : 0.52575000000000005,
             "children" : [
 
             ],
@@ -1285,7 +1285,7 @@
             "codeOverrideFile" : ".\/TopHeader.tsx",
             "codeOverrideIdentifier" : ".\/TopHeader.tsx_StickySubheading3",
             "codeOverrideName" : "StickySubheading3",
-            "constraintsLocked" : false,
+            "constraintsLocked" : true,
             "deviceType" : null,
             "exportOptions" : [
 
@@ -1446,8 +1446,8 @@
             "blendingEnabled" : 0,
             "blendingMode" : "normal",
             "bottom" : null,
-            "centerAnchorX" : 0.35199999999999998,
-            "centerAnchorY" : 0.058406482106684671,
+            "centerAnchorX" : 0.376,
+            "centerAnchorY" : 0.05671843349088454,
             "children" : [
               {
                 "__class" : "TextNode",
@@ -1611,7 +1611,7 @@
             "isExternalMaster" : null,
             "isMaster" : false,
             "isTarget" : false,
-            "left" : 23,
+            "left" : 32,
             "locked" : false,
             "name" : "subtitle",
             "navigationTarget" : null,
@@ -1632,7 +1632,7 @@
             "replicaInfo" : null,
             "right" : null,
             "rotation" : 0,
-            "top" : 156,
+            "top" : 151,
             "visible" : true,
             "width" : 218,
             "widthType" : 0
@@ -1641,8 +1641,8 @@
             "__class" : "CodeComponentNode",
             "aspectRatio" : null,
             "bottom" : null,
-            "centerAnchorX" : 0.436,
-            "centerAnchorY" : 0.03916272788656313,
+            "centerAnchorX" : 0.43066666666666664,
+            "centerAnchorY" : 0.036461850101282917,
             "children" : [
 
             ],
@@ -1669,12 +1669,12 @@
             "fillImagePixelWidth" : null,
             "fillImageResize" : "fill",
             "fillType" : "color",
-            "height" : 80,
+            "height" : 72,
             "heightType" : 0,
             "id" : "xGkwD_8iA",
             "intrinsicHeight" : null,
             "intrinsicWidth" : null,
-            "left" : 10,
+            "left" : 20,
             "locked" : false,
             "name" : "DarkLogo",
             "opacity" : 1,
@@ -1688,11 +1688,11 @@
             "radiusPerCorner" : false,
             "radiusTopLeft" : 0,
             "radiusTopRight" : 0,
-            "right" : 58,
+            "right" : 72,
             "rotation" : 0,
-            "top" : 76,
+            "top" : 72,
             "visible" : true,
-            "width" : 307,
+            "width" : 283,
             "widthType" : 0
           },
           {
@@ -3442,7 +3442,7 @@
         "guidesY" : [
 
         ],
-        "height" : 2962,
+        "height" : 4000,
         "heightType" : 0,
         "id" : "RhuOV1VYa",
         "intrinsicHeight" : null,

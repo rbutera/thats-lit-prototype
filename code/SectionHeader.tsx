@@ -8,7 +8,7 @@ import styled from "styled-components"
 
 const Heading = styled.h1`
   display: inline-block;
-  background: #111111;
+  background: rgba(0, 0, 0, 0.5);
   padding: 4pt 8pt;
   border-radius: 2pt;
   font-size: 1.5rem;
@@ -20,6 +20,7 @@ const Heading = styled.h1`
   margin-right: 8pt;
   text-transform: uppercase;
   letter-spacing: 1.618pt;
+  backdrop-filter: invert(1) brightness(0.1);
 `
 
 export function SectionHeader(props) {
