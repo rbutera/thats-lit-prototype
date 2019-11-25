@@ -105,24 +105,11 @@ export function DarkLogo(): Override {
   const y = useSticky(scrollY, [125, 999999])
   const left = useTransform(scrollY, [0, 125], [12, -40])
   const scale = useTransform(scrollY, [0, 125], [1, 0.5])
-  const opacity = useTransform(scrollY, [125, 200], [1, 0])
+  const color = useTransform(scrollY, [0, 125], ["#1a1a1a", "#efefef"])
 
   // This is short for { y: y }, where the first "y" is the property key, the second "y"
   // is the variable name.
-  return { y, left, scale, opacity }
-}
-export function LightLogo(): Override {
-  // scrollY here is a MotionValue
-  const { scrollY } = useScroll()
-  // y is a MotionValue too
-  const y = useSticky(scrollY, [125, 999999])
-  const left = useTransform(scrollY, [0, 125], [12, -40])
-  const scale = useTransform(scrollY, [0, 125], [1, 0.5])
-  const opacity = useTransform(scrollY, [0, 200], [0, 1])
-
-  // This is short for { y: y }, where the first "y" is the property key, the second "y"
-  // is the variable name.
-  return { y, left, scale, opacity }
+  return { y, left, scale, color }
 }
 
 export function ShowOnScroll(): Override {
