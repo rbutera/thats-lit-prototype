@@ -26,12 +26,13 @@ export function Logo(props) {
       opacity={opacity}
       color={color}
       style={{
+        borderRadius: "2pt",
         fontFamily: "Aktiv Grotesk",
-        fontSize: "4rem",
+        fontSize: "3.9rem",
         fontWeight: "bold"
       }}
     >
-      <span>That's Lit!</span>
+      That's Lit!
     </Frame>
   )
 }

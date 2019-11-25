@@ -17,37 +17,11 @@ export function AlwaysSticky(): Override {
   }
 }
 
-export function HeaderStickiness(): Override {
-  // scrollY here is a MotionValue
-  const { scrollY } = useScroll()
-  // y is a MotionValue too
-  const y = useSticky(scrollY, [0, 999999])
-  const height = useTransform(scrollY, [0, 130], [280, 72])
-  const width = useTransform(scrollY, [0, 130], [375, 180])
-  const borderRadius = useTransform(scrollY, [0, 130], [0, 4])
-  const marginTop = useTransform(scrollY, [0, 130], [0, 4])
-  const backgroundColor = useTransform(
-    scrollY,
-    [130, 200],
-    ["#ffffff", "#000000"]
-  )
-  // This is short for { y: y }, where the first "y" is the property key, the second "y"
-  // is the variable name.
-  return { y, height, width, borderRadius, marginTop, backgroundColor }
-}
-
 export function MenuButtonStickToTop(): Override {
   const { scrollY } = useScroll()
   const y = useSticky(scrollY, [0, 9999999999])
   const opacity = useTransform(scrollY, [0, 50], [1, 0])
   return { y, opacity }
-}
-
-export function LogoColor(): Override {
-  const { scrollY } = useScroll()
-  const fill = useTransform(scrollY, [0, 100], "#000000", "#ffffff")
-  const y = useSticky(scrollY, [10, 99999])
-  return { y, fill }
 }
 
 export function LightMenuButton(): Override {
@@ -60,7 +34,7 @@ export function StickySubheading(): Override {
   // scrollY here is a MotionValue
   const { scrollY } = useScroll()
   // y is a MotionValue too
-  const y = useSticky(scrollY, [235, 1340])
+  const y = useSticky(scrollY, [144, 1340])
   const opacity = useTransform(scrollY, [1345, 1360], [1, 0])
 
   // This is short for { y: y }, where the first "y" is the property key, the second "y"
@@ -102,14 +76,19 @@ export function DarkLogo(): Override {
   // scrollY here is a MotionValue
   const { scrollY } = useScroll()
   // y is a MotionValue too
-  const y = useSticky(scrollY, [125, 999999])
-  const left = useTransform(scrollY, [0, 125], [12, -40])
-  const scale = useTransform(scrollY, [0, 125], [1, 0.5])
-  const color = useTransform(scrollY, [0, 125], ["#1a1a1a", "#efefef"])
+  const y = useSticky(scrollY, [72, 999999])
+  const left = useTransform(scrollY, [0, 72], [0, -40])
+  const scale = useTransform(scrollY, [0, 72], [1, 0.66])
+  const color = useTransform(scrollY, [100, 200], ["#1a1a1a", "#1a1a1a"])
+  const background = useTransform(
+    scrollY,
+    [100, 200],
+    ["rgba(0, 0, 0, 0)", "rgba(200, 200, 200, 1)"]
+  )
 
   // This is short for { y: y }, where the first "y" is the property key, the second "y"
   // is the variable name.
-  return { y, left, scale, color }
+  return { y, left, scale, color, background }
 }
 
 export function ShowOnScroll(): Override {
