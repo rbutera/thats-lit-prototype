@@ -23,12 +23,17 @@ export function HeaderStickiness(): Override {
   // y is a MotionValue too
   const y = useSticky(scrollY, [0, 999999])
   const height = useTransform(scrollY, [0, 130], [280, 72])
-  const width = useTransform(scrollY, [0, 130], [375, 200])
+  const width = useTransform(scrollY, [0, 130], [375, 180])
   const borderRadius = useTransform(scrollY, [0, 130], [0, 4])
   const marginTop = useTransform(scrollY, [0, 130], [0, 4])
+  const backgroundColor = useTransform(
+    scrollY,
+    [130, 200],
+    ["#ffffff", "#000000"]
+  )
   // This is short for { y: y }, where the first "y" is the property key, the second "y"
   // is the variable name.
-  return { y, height, width, borderRadius, marginTop }
+  return { y, height, width, borderRadius, marginTop, backgroundColor }
 }
 
 export function MenuButtonStickToTop(): Override {
@@ -36,6 +41,13 @@ export function MenuButtonStickToTop(): Override {
   const y = useSticky(scrollY, [0, 9999999999])
   const opacity = useTransform(scrollY, [0, 50], [1, 0])
   return { y, opacity }
+}
+
+export function LogoColor(): Override {
+  const { scrollY } = useScroll()
+  const fill = useTransform(scrollY, [0, 100], "#000000", "#ffffff")
+  const y = useSticky(scrollY, [10, 99999])
+  return { y, fill }
 }
 
 export function LightMenuButton(): Override {
@@ -67,19 +79,6 @@ export function StickySubheading2(): Override {
   return { y, opacity }
 }
 
-export function TitleEffects(): Override {
-  // scrollY here is a MotionValue
-  const { scrollY } = useScroll()
-  // y is a MotionValue too
-  const y = useSticky(scrollY, [230, 999999])
-  const height = useTransform(scrollY, [0, 230], [90, 10])
-
-  return {
-    y,
-    height
-  }
-}
-
 export function RecentFadeOutOnScroll(): Override {
   const { scrollY } = useScroll()
   const opacity = useTransform(scrollY, [100, 500], [0, 1])
@@ -99,19 +98,31 @@ export function SubtitleHideOnScroll(): Override {
   return { opacity }
 }
 
-export function ShrinkOnScroll(): Override {
+export function DarkLogo(): Override {
   // scrollY here is a MotionValue
   const { scrollY } = useScroll()
   // y is a MotionValue too
-  const left = useTransform(scrollY, [0, 125], [180, 100])
-  const scale = useTransform(scrollY, [0, 125], [1, 0.5])
   const y = useSticky(scrollY, [125, 999999])
-  console.log("scrollY:", scrollY)
-  console.log("y:", y)
+  const left = useTransform(scrollY, [0, 125], [12, -40])
+  const scale = useTransform(scrollY, [0, 125], [1, 0.5])
+  const opacity = useTransform(scrollY, [125, 200], [1, 0])
 
   // This is short for { y: y }, where the first "y" is the property key, the second "y"
   // is the variable name.
-  return { y, left, scale }
+  return { y, left, scale, opacity }
+}
+export function LightLogo(): Override {
+  // scrollY here is a MotionValue
+  const { scrollY } = useScroll()
+  // y is a MotionValue too
+  const y = useSticky(scrollY, [125, 999999])
+  const left = useTransform(scrollY, [0, 125], [12, -40])
+  const scale = useTransform(scrollY, [0, 125], [1, 0.5])
+  const opacity = useTransform(scrollY, [0, 200], [0, 1])
+
+  // This is short for { y: y }, where the first "y" is the property key, the second "y"
+  // is the variable name.
+  return { y, left, scale, opacity }
 }
 
 export function ShowOnScroll(): Override {

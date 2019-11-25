@@ -1,47 +1,47 @@
 import * as React from "react"
-import { Frame, addPropertyControls, ControlType } from "framer"
+import { Frame, addPropertyControls, ControlType, useTransform } from "framer"
+import { useSticky, useScroll } from "@framer/lintonye.parallax/code"
+import styled from "styled-components"
 
 // Open Preview: Command + P
 // Learn more: https://framer.com/api
 
-export function Logo(props) {
-    const { text, tint, ...rest } = props
+const StyledLogo = styled.svg`
+  display: block;
+  & path {
+    fill: ${props => props.fill};
+  }
+`
 
-    return (
-        <Frame
-            {...rest}
-            background={tint}
-            whileHover={{
-                scale: 1.1,
-            }}
-            style={{
-                color: "#fff",
-                fontSize: 16,
-                fontWeight: 600,
-            }}
-        >
-            {text}
-        </Frame>
-    )
+export function Logo(props) {
+  const { x, y, scale, left, opacity, fill } = props
+  return (
+    <Frame
+      left={left}
+      scale={scale}
+      background={background}
+      x={x}
+      y={y}
+      opacity={opacity}
+      color={fill}
+      style={{
+        fontFamily: "Aktiv Grotesk",
+        fontSize: "4rem"
+      }}
+    >
+      That's Lit!
+    </Frame>
+  )
 }
 
 Logo.defaultProps = {
-    height: 128,
-    width: 240,
-    text: "Get started!",
-    tint: "#0099ff",
+  fill: "tomato"
 }
 
-// Learn more: https://framer.com/api/property-controls/
 addPropertyControls(Logo, {
-    text: {
-        title: "Text",
-        type: ControlType.String,
-        defaultValue: "Hello Framer!",
-    },
-    tint: {
-        title: "Tint",
-        type: ControlType.Color,
-        defaultValue: "#0099ff",
-    },
+  fill: {
+    title: "fill",
+    type: ControlType.Color,
+    defaultValue: "tomato"
+  }
 })

@@ -6,7 +6,7 @@ const RecCard = styled.div`
   font-family: "Aktiv Grotesk";
   color: white;
   background-image: ${props => {
-    return 'url("' + props.picture + '")'
+      return 'url("' + props.picture + '")'
   }};
   background-size: cover;
   background-position: center;
@@ -14,7 +14,7 @@ const RecCard = styled.div`
   height: ${props => props.height};
   color: white;
   border-radius: 8pt;
-  overflow: hidden;
+  // overflow: hidden;
   position: relative;
   margin-bottom: 8pt;
   box-shadow: 2pt 2pt 4pt rgba(0, 0, 0, 0.2);
@@ -109,8 +109,8 @@ const CardContent = styled.div`
   width: 100%;
   height: 100%;
   position: relative;
-  z-index: 3;
   display: flex;
+  z-index: 5
   flex-direction: column-reverse;
   justify-content: flex-start;
   margin: 0 0 8pt 0;
@@ -120,11 +120,12 @@ const CardPostProcessing = styled.div`
   width: 100%;
   height: 20%;
   display: inline;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0; 
+  position: relative;
+  z-index: 4;
+  top: -360px;
+  left: -180px;
+  right: -360px;
+  bottom: -360px; 
   backdrop-filter: contrast(1.2) brightness(0.9);
   mix-blend-mode: hard-light;
   opacity: 0.5;
@@ -154,55 +155,55 @@ const CardPostProcessing = styled.div`
 `
 
 export function Recommendation(props) {
-  const { name, tagline, picture, category, height } = props
-  return (
-    <RecCard height={height + "px"} picture={picture}>
-      <CardContent>
-        {" "}
-        <CardHeader>
-          <Caption>
-            <Category>{category}</Category>
-            <Name>{name}</Name>
-            {/* <Tagline>{tagline}</Tagline> */}
-          </Caption>
-          <Spacer />
-        </CardHeader>
-        <Spacer />
-        <CardFooter></CardFooter>
-      </CardContent>
-      <CardPostProcessing height={height + "px"} />
-    </RecCard>
-  )
+    const { name, tagline, picture, category, height } = props
+    return (
+        <RecCard height={height + "px"} picture={picture}>
+            <CardContent>
+                {" "}
+                <CardHeader>
+                    <Caption>
+                        <Category>{category}</Category>
+                        <Name>{name}</Name>
+                        {/* <Tagline>{tagline}</Tagline> */}
+                    </Caption>
+                    <Spacer />
+                </CardHeader>
+                <Spacer />
+                <CardFooter></CardFooter>
+            </CardContent>
+            <CardPostProcessing height={height + "px"} />
+        </RecCard>
+    )
 }
 
 Recommendation.defaultProps = {
-  name: "Sed euismod",
-  tagline: "Lorem ipsum dolor sit amet."
+    name: "Sed euismod",
+    tagline: "Lorem ipsum dolor sit amet.",
 }
 
 addPropertyControls(Recommendation, {
-  tagline: {
-    title: "Tagline",
-    type: ControlType.String,
-    defaultValue: "Lorem ipsum dolor sit amet."
-  },
-  name: {
-    title: "Name",
-    type: ControlType.String,
-    defaultValue: "Recommendation Name"
-  },
-  height: {
-    title: "Height",
-    type: ControlType.Number,
-    defaultValue: 360
-  },
-  category: {
-    title: "Category",
-    type: ControlType.String,
-    defaultValue: "Category"
-  },
-  picture: {
-    title: "Picture",
-    type: ControlType.Image
-  }
+    tagline: {
+        title: "Tagline",
+        type: ControlType.String,
+        defaultValue: "Lorem ipsum dolor sit amet.",
+    },
+    name: {
+        title: "Name",
+        type: ControlType.String,
+        defaultValue: "Recommendation Name",
+    },
+    height: {
+        title: "Height",
+        type: ControlType.Number,
+        defaultValue: 360,
+    },
+    category: {
+        title: "Category",
+        type: ControlType.String,
+        defaultValue: "Category",
+    },
+    picture: {
+        title: "Picture",
+        type: ControlType.Image,
+    },
 })
