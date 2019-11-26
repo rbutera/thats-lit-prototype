@@ -96,7 +96,7 @@ const Caption = styled.div`
 const Name = styled.div`
   color: white;
   font-weight: 600;
-  font-size: 32pt;
+  font-size: 28pt;
   /* text-transform: uppercase; */
   /* letter-spacing: 3pt; */
   font-family: "Aktiv Grotesk";
