@@ -32,7 +32,7 @@ function shuffle(array) {
 const SubtitleStyle = styled.div`
   text-align: left;
   font-family: ${FONT_STACK};
-  padding: 0pt 8pt;
+  padding: 0pt 12pt;
   font-weight: 700;
   margin: 0;
   height: 100%;
@@ -41,7 +41,7 @@ const SubtitleStyle = styled.div`
   width: 100%;
   line-height: 1em;
   font-size: 1.618em;
-  word-wrap
+  opacity: {props => props.opacity}
 `
 
 const Line = styled.span`
@@ -111,7 +111,7 @@ export function Subtitle(props) {
         padding: 0
       }}
     >
-      <SubtitleStyle>
+      <SubtitleStyle opacity={opacity}>
         <Line>
           a <Shuffler period={3000} options={firstLineOptions} />
         </Line>

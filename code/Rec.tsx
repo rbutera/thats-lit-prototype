@@ -1,4 +1,5 @@
 import * as React from "react"
+import { useState } from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
 import styled from "styled-components"
 
@@ -28,18 +29,20 @@ const CardHeader = styled.div`
   margin: 0;
   width: 100%;
   padding-left: 16pt;
-  padding-top: 24pt;
+  padding-right: 16pt;
 `
 
 const CardFooter = styled.div`
+  font-weight: 500;
+
   display: flex;
   padding: 16pt;
   justify-content: flex-end;
   margin: 0;
   width: 100%;
-  padding-bottom: 24pt;
+  padding-bottom: 20pt;
   background: rgba(0, 0, 0, 0);
-  backdrop-filter: blur(100px) brightness(0.9);
+  backdrop-filter: blur(16pt) brightness(0.8) contrast(0.9);
 `
 
 const Spacer = styled.div`
@@ -51,37 +54,9 @@ const Category = styled.div`
   font-weight: bold;
   font-size: 10pt;
   letter-spacing: 1pt;
-  padding-left: 3pt;
-  padding-top: 3pt;
+
+  opacity: 0.5;
   /* padding-top: 3pt; */
-`
-
-const CategoryBubble = styled.div`
-  border-radius: 8pt;
-
-  background-color: rgba(200, 200, 200, 0.5);
-  color: rgba(0, 0, 0, 0.66);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 12px;
-  text-transform: uppercase;
-  font-weight: bold;
-  font-size: 10pt;
-  letter-spacing: 1pt;
-`
-
-const CaptionBubble = styled.div`
-  /* background: rgba(0, 0, 0, 0.3); */
-  padding: 16pt;
-  color: white;
-  margin: 0;
-  width: auto;
-  backdrop-filter: contrast(0.9) brightness(0.7) blur(8pt);
-  display: flex;
-  flex-direction: column;
-  /* border-radius: 0 0 8pt 8pt; */
-  // border-radius: 0 8pt;
 `
 
 const Caption = styled.div`
@@ -93,6 +68,7 @@ const Caption = styled.div`
   flex-direction: column;
   text-align: left;
   justify-content: flex-start;
+  padding: 18pt 0;
 
   /* padding: 8pt; */
   /* border-radius: 0 0 8pt 8pt; */
@@ -101,19 +77,30 @@ const Caption = styled.div`
 const Name = styled.div`
   color: white;
   font-weight: 600;
-  font-size: 28pt;
+  font-size: 24pt;
+
   /* text-transform: uppercase; */
   /* letter-spacing: 3pt; */
 
+  font-family: "aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin-top: 2pt;
+  margin-bottom: 4pt;
   line-height: 0.8em;
-  letter-spacing: 0pt;
+  letter-spacing: -0.5pt;
   text-align: left;
   text-shadow: 2px 2px 2px rgba(15, 15, 15, 0.2);
 `
 
 const Tagline = styled.div`
-  font-size: 13pt;
+  font-size: 12pt;
+  line-height: 12pt;
   color: white;
+  margin-top: 4pt;
+  opacity: ${props => {
+    return props.opacity
+  }};
+  transition: all 0.5s ease-in-out;
   /* mix-blend-mode: difference; */
 `
 
@@ -130,16 +117,17 @@ const CardContent = styled.div`
 
 const CardPostProcessing = styled.div`
   width: 100%;
-  height: 50%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
   display: block;
   position: absolute;
   z-index: 4;
   top: 0;
   left: 0;
-  // backdrop-filter: contrast(1.1) brightness(0.9);
-
+  backdrop-filter: contrast(1.1) brightness(0.9);
   mix-blend-mode: hard-light;
-  opacity: 0.66;
+  opacity: 0.75;
   background: linear-gradient(
     to top,
     hsla(0, 0%, 0%, 0) 0%,
@@ -169,30 +157,32 @@ const CardBlur = styled.div`
   z-index: 2;
   bottom: 0;
   left: 0;
-  backdrop-filter: blur(10px) brightness(0.8);
+  backdrop-filter: blur(4px) brightness(0.8);
   background: rgba(0,0,0,0);
   opacity: ${props => props.opacity};
+  transition: all 0.5s ease-in-out;
 };
 `
 
 export function Recommendation(props) {
-  const { name, flipped, tagline, picture, category, height } = props
+  const { name, tagline, picture, category, height } = props
+
+  const [flipped, setFlipped] = useState(false)
+  const toggleFlipped = () => setFlipped(!flipped)
 
   return (
-    <RecCard height={height + "px"} picture={picture}>
+    <RecCard height={height + "px"} picture={picture} onClick={toggleFlipped}>
       <CardContent>
         {" "}
         <CardHeader>
           <Caption>
             <Category>{category}</Category>
             <Name>{name}</Name>
+            <Tagline opacity={flipped ? 1 : 0}>{tagline}</Tagline>
           </Caption>
           <Spacer />
         </CardHeader>
         <Spacer />
-        <CardFooter>
-          <Tagline>{tagline}</Tagline>
-        </CardFooter>
       </CardContent>
       <CardPostProcessing />
       <CardBlur opacity={flipped ? 1 : 0} />
