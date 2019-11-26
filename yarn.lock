@@ -333,6 +333,11 @@
     markdown-to-jsx "^6.10.2"
     react-select "^3.0.3"
 
+"@framer/steveruizok.fontloader@^1.7.0":
+  version "1.7.0"
+  resolved "https://registry.framer.com/@framer/steveruizok.fontloader/-/@framer/steveruizok.fontloader-1.7.0.tgz#c5d500d2d260b8ae1a2db4e07cfc3dece5c4bf1f"
+  integrity sha512-0m90++cJlbkMSw0TYXAUZjyO2ZrT3F9h1XPhGYWpBtJOhDHceODVSriHcloxqj7VSy//OkvvlYsMqVR9pj8JiA==
+
 "@mapbox/geo-viewport@^0.4.0":
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/@mapbox/geo-viewport/-/geo-viewport-0.4.0.tgz#0a8dc5812d3be12c778d6545b2f3f4dec9c633da"
@@ -843,11 +848,6 @@ framer@^0.1.8:
     eventemitter3 "^3.1.0"
     hsluv "^0.0.3"
     immutable "^3.8.2"
-
-framer@^1.1.5:
-  version "1.1.5"
-  resolved "https://registry.yarnpkg.com/framer/-/framer-1.1.5.tgz#5660df48438b404788f59991159057add3d0192a"
-  integrity sha512-o6dIB6KGF8M63LAfmqggoTjqBtM2Z1T30+nPCZO7AR/6zS191ze2/uGttnrtpEihNzN+6GvFJ3QJLClk0ObDxA==
 
 framesync@^4.0.0, framesync@^4.0.1, framesync@^4.0.2, framesync@^4.0.4:
   version "4.0.4"

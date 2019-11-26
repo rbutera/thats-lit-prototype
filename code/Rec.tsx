@@ -3,7 +3,9 @@ import { Frame, addPropertyControls, ControlType } from "framer"
 import styled from "styled-components"
 
 const RecCard = styled.div`
-  font-family: "Aktiv Grotesk";
+  font-family: "aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+
   color: white;
   background-image: ${props => {
     return 'url("' + props.picture + '")'
@@ -26,7 +28,7 @@ const CardHeader = styled.div`
   margin: 0;
   width: 100%;
   padding-left: 16pt;
-  padding-bottom: 24pt;
+  padding-top: 24pt;
 `
 
 const CardFooter = styled.div`
@@ -35,6 +37,9 @@ const CardFooter = styled.div`
   justify-content: flex-end;
   margin: 0;
   width: 100%;
+  padding-bottom: 24pt;
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(100px) brightness(0.9);
 `
 
 const Spacer = styled.div`
@@ -85,7 +90,7 @@ const Caption = styled.div`
   margin: 0;
   width: 100%;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   text-align: left;
   justify-content: flex-start;
 
@@ -99,7 +104,7 @@ const Name = styled.div`
   font-size: 28pt;
   /* text-transform: uppercase; */
   /* letter-spacing: 3pt; */
-  font-family: "Aktiv Grotesk";
+
   line-height: 0.8em;
   letter-spacing: 0pt;
   text-align: left;
@@ -118,24 +123,25 @@ const CardContent = styled.div`
   position: relative;
   display: flex;
   z-index: 5
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: flex-start;
   margin: 0;
 `
 
 const CardPostProcessing = styled.div`
   width: 100%;
-  height: 375px;
+  height: 50%;
   display: block;
   position: absolute;
   z-index: 4;
   top: 0;
   left: 0;
-  backdrop-filter: contrast(1.1) brightness(0.8);
+  // backdrop-filter: contrast(1.1) brightness(0.9);
+
   mix-blend-mode: hard-light;
-  opacity: 0.75;
+  opacity: 0.66;
   background: linear-gradient(
-    to bottom,
+    to top,
     hsla(0, 0%, 0%, 0) 0%,
     hsla(0, 0%, 0%, 0.013) 8.1%,
     hsla(0, 0%, 0%, 0.049) 15.5%,
@@ -154,13 +160,24 @@ const CardPostProcessing = styled.div`
     hsl(0, 0%, 0%) 100%
   );
 };
+`
+const CardBlur = styled.div`
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
   z-index: 2;
-  // border-radius: 8pt;
-  height: ${({ height }) => height};
+  bottom: 0;
+  left: 0;
+  backdrop-filter: blur(10px) brightness(0.8);
+  background: rgba(0,0,0,0);
+  opacity: ${props => props.opacity};
+};
 `
 
 export function Recommendation(props) {
-  const { name, tagline, picture, category, height } = props
+  const { name, flipped, tagline, picture, category, height } = props
+
   return (
     <RecCard height={height + "px"} picture={picture}>
       <CardContent>
@@ -169,14 +186,16 @@ export function Recommendation(props) {
           <Caption>
             <Category>{category}</Category>
             <Name>{name}</Name>
-            {/* <Tagline>{tagline}</Tagline> */}
           </Caption>
           <Spacer />
         </CardHeader>
         <Spacer />
-        <CardFooter></CardFooter>
+        <CardFooter>
+          <Tagline>{tagline}</Tagline>
+        </CardFooter>
       </CardContent>
-      <CardPostProcessing height={height + "px"} />
+      <CardPostProcessing />
+      <CardBlur opacity={flipped ? 1 : 0} />
     </RecCard>
   )
 }
@@ -196,6 +215,11 @@ addPropertyControls(Recommendation, {
     title: "Name",
     type: ControlType.String,
     defaultValue: "Recommendation Name"
+  },
+  flipped: {
+    title: "Flipped?",
+    type: ControlType.Boolean,
+    defaultValue: false
   },
   height: {
     title: "Height",

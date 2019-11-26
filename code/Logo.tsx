@@ -17,8 +17,8 @@ const StyledLogo = styled.svg`
 const TextEffects = styled.h1`
   display: inline-block;
   border-radius: "2pt";
-  font-family: "Aktiv Grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   font-weight: "bold";
   height: 100%;
   width: 100%;
