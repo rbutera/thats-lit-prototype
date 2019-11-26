@@ -114,6 +114,14 @@ export function SubtitleHideOnScroll(): Override {
   return { opacity }
 }
 
+export function SubtitleHide(): Override {
+  const { scrollY } = useScroll()
+  const x = useTransform(scrollY, [0, 100], [0, -1000])
+  const opacity = useTransform(scrollY, [0, 100], [1, 0])
+
+  return { x, opacity }
+}
+
 export function DarkLogo(): Override {
   // scrollY here is a MotionValue
   const { scrollY } = useScroll()

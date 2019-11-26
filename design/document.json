@@ -1117,7 +1117,64 @@
             "centerAnchorX" : 0.5,
             "centerAnchorY" : 0.027875,
             "children" : [
+              {
+                "__class" : "CodeComponentNode",
+                "aspectRatio" : null,
+                "bottom" : 50,
+                "centerAnchorX" : 0.46266666666666667,
+                "centerAnchorY" : 0.71179039301310043,
+                "children" : [
 
+                ],
+                "clip" : true,
+                "codeComponentIdentifier" : ".\/Subtitle.tsx_Subtitle",
+                "codeComponentProps" : {
+                  "text" : "Hello Framer!",
+                  "tint" : "#0099ff"
+                },
+                "codeOverrideEnabled" : true,
+                "codeOverrideFile" : ".\/TopHeader.tsx",
+                "codeOverrideIdentifier" : ".\/TopHeader.tsx_SubtitleHide",
+                "codeOverrideName" : "SubtitleHide",
+                "constraintsLocked" : false,
+                "deviceType" : null,
+                "exportOptions" : [
+
+                ],
+                "fillColor" : "rgba(255,255,255,1)",
+                "fillEnabled" : false,
+                "fillImage" : null,
+                "fillImageOriginalName" : null,
+                "fillImagePixelHeight" : null,
+                "fillImagePixelWidth" : null,
+                "fillImageResize" : "fill",
+                "fillType" : "color",
+                "height" : 32,
+                "heightType" : 0,
+                "id" : "xuRAc1env",
+                "intrinsicHeight" : 128,
+                "intrinsicWidth" : 240,
+                "left" : 20,
+                "locked" : false,
+                "name" : null,
+                "opacity" : 1,
+                "originalid" : null,
+                "parentid" : "ACZzQWuPz",
+                "previewSettings" : null,
+                "radius" : 0,
+                "radiusBottomLeft" : 0,
+                "radiusBottomRight" : 0,
+                "radiusIsRelative" : false,
+                "radiusPerCorner" : false,
+                "radiusTopLeft" : 0,
+                "radiusTopRight" : 0,
+                "right" : 48,
+                "rotation" : 0,
+                "top" : null,
+                "visible" : true,
+                "width" : 307,
+                "widthType" : 0
+              }
             ],
             "clip" : false,
             "codeOverrideEnabled" : false,
@@ -1438,203 +1495,6 @@
             "top" : 210,
             "visible" : true,
             "width" : 375,
-            "widthType" : 0
-          },
-          {
-            "__class" : "FrameNode",
-            "aspectRatio" : null,
-            "blendingEnabled" : 0,
-            "blendingMode" : "normal",
-            "bottom" : null,
-            "centerAnchorX" : 0.376,
-            "centerAnchorY" : 0.05671843349088454,
-            "children" : [
-              {
-                "__class" : "TextNode",
-                "autoSize" : true,
-                "bottom" : null,
-                "centerAnchorX" : 0.5,
-                "centerAnchorY" : 0.5,
-                "codeOverrideEnabled" : true,
-                "codeOverrideFile" : ".\/TopHeader.tsx",
-                "codeOverrideIdentifier" : ".\/TopHeader.tsx_HideOnScroll",
-                "codeOverrideName" : "HideOnScroll",
-                "constraintsLocked" : false,
-                "exportOptions" : [
-
-                ],
-                "height" : 34,
-                "heightType" : 0,
-                "id" : "ZnRdRz20S",
-                "isTarget" : false,
-                "left" : null,
-                "locked" : false,
-                "name" : null,
-                "opacity" : 1,
-                "originalid" : null,
-                "parentid" : "LWFiLRw5d",
-                "right" : null,
-                "rotation" : 0,
-                "styledText" : {
-                  "__class" : "StyledTextDraft",
-                  "blocks" : [
-                    {
-                      "data" : {
-                        "emptyStyle" : [
-                          "FONT:AktivGrotesk-Bold",
-                          "LINEHEIGHT:0.85",
-                          "LETTERSPACING:-0.5",
-                          "SIZE:20",
-                          "COLOR:rgb(20, 20, 20)"
-                        ]
-                      },
-                      "depth" : 0,
-                      "entityRanges" : [
-
-                      ],
-                      "inlineStyleRanges" : [
-                        {
-                          "length" : 15,
-                          "offset" : 0,
-                          "style" : "FONT:AktivGrotesk-Bold"
-                        },
-                        {
-                          "length" : 15,
-                          "offset" : 0,
-                          "style" : "LINEHEIGHT:0.85"
-                        },
-                        {
-                          "length" : 15,
-                          "offset" : 0,
-                          "style" : "LETTERSPACING:-0.5"
-                        },
-                        {
-                          "length" : 15,
-                          "offset" : 0,
-                          "style" : "SIZE:20"
-                        },
-                        {
-                          "length" : 15,
-                          "offset" : 0,
-                          "style" : "COLOR:rgb(20, 20, 20)"
-                        }
-                      ],
-                      "key" : "et6ps",
-                      "text" : "a collection of",
-                      "type" : "unstyled"
-                    },
-                    {
-                      "data" : {
-                        "emptyStyle" : [
-                          "FONT:AktivGrotesk-Bold",
-                          "LINEHEIGHT:0.85",
-                          "LETTERSPACING:-0.5",
-                          "SIZE:20",
-                          "COLOR:rgb(20, 20, 20)"
-                        ]
-                      },
-                      "depth" : 0,
-                      "entityRanges" : [
-
-                      ],
-                      "inlineStyleRanges" : [
-                        {
-                          "length" : 20,
-                          "offset" : 0,
-                          "style" : "FONT:AktivGrotesk-Bold"
-                        },
-                        {
-                          "length" : 20,
-                          "offset" : 0,
-                          "style" : "LINEHEIGHT:0.85"
-                        },
-                        {
-                          "length" : 20,
-                          "offset" : 0,
-                          "style" : "LETTERSPACING:-0.5"
-                        },
-                        {
-                          "length" : 20,
-                          "offset" : 0,
-                          "style" : "SIZE:20"
-                        },
-                        {
-                          "length" : 20,
-                          "offset" : 0,
-                          "style" : "COLOR:rgb(20, 20, 20)"
-                        }
-                      ],
-                      "key" : "f1ohq",
-                      "text" : "dope recommendations",
-                      "type" : "unstyled"
-                    }
-                  ],
-                  "entityMap" : {
-
-                  }
-                },
-                "top" : null,
-                "visible" : true,
-                "width" : 218,
-                "widthType" : 0
-              }
-            ],
-            "clip" : false,
-            "codeOverrideEnabled" : true,
-            "codeOverrideFile" : ".\/TopHeader.tsx",
-            "codeOverrideIdentifier" : ".\/TopHeader.tsx_SubtitleHideOnScroll",
-            "codeOverrideName" : "SubtitleHideOnScroll",
-            "constraintsLocked" : false,
-            "deviceType" : null,
-            "exportOptions" : [
-
-            ],
-            "fillColor" : "rgba(255,255,255,1)",
-            "fillEnabled" : false,
-            "fillImage" : null,
-            "fillImageOriginalName" : null,
-            "fillImagePixelHeight" : null,
-            "fillImagePixelWidth" : null,
-            "fillImageResize" : "fill",
-            "fillType" : "color",
-            "guidesX" : [
-
-            ],
-            "guidesY" : [
-
-            ],
-            "height" : 34,
-            "heightType" : 0,
-            "id" : "LWFiLRw5d",
-            "intrinsicHeight" : null,
-            "intrinsicWidth" : null,
-            "isExternalMaster" : null,
-            "isMaster" : false,
-            "isTarget" : false,
-            "left" : 32,
-            "locked" : false,
-            "name" : "subtitle",
-            "navigationTarget" : null,
-            "navigationTransition" : "push",
-            "navigationTransitionBackdropColor" : "rgba(4,4,15,.4)",
-            "navigationTransitionDirection" : "left",
-            "opacity" : 1,
-            "originalid" : null,
-            "parentid" : "RhuOV1VYa",
-            "previewSettings" : null,
-            "radius" : 0,
-            "radiusBottomLeft" : 0,
-            "radiusBottomRight" : 0,
-            "radiusIsRelative" : false,
-            "radiusPerCorner" : false,
-            "radiusTopLeft" : 0,
-            "radiusTopRight" : 0,
-            "replicaInfo" : null,
-            "right" : null,
-            "rotation" : 0,
-            "top" : 151,
-            "visible" : true,
-            "width" : 218,
             "widthType" : 0
           },
           {

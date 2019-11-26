@@ -14,3 +14,6 @@ if (document.getElementById("framerCustomFont") === null) {
   console.log("CSS already loaded!")
   return
 }
+
+export const FONT_STACK = `"aktiv-grotesk", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;`

@@ -23,6 +23,7 @@ const TextEffects = styled.h1`
   height: 100%;
   width: 100%;
   /* line-height: 1rem; */
+  letter-spacing: -1pt;
   margin: 0;
   padding: 0;
   position: relative;
