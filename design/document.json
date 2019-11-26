@@ -1008,10 +1008,10 @@
             "__class" : "FrameNode",
             "aspectRatio" : null,
             "blendingEnabled" : 0,
-            "blendingMode" : "normal",
+            "blendingMode" : "hard-light",
             "bottom" : null,
-            "centerAnchorX" : 0.51466666666666672,
-            "centerAnchorY" : 0.024983119513841998,
+            "centerAnchorX" : 0.5,
+            "centerAnchorY" : 0.028625000000000001,
             "children" : [
 
             ],
@@ -1076,7 +1076,7 @@
             "guidesY" : [
 
             ],
-            "height" : 150,
+            "height" : 229,
             "heightType" : 0,
             "id" : "FJOG7sI6r",
             "intrinsicHeight" : null,

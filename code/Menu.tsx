@@ -31,11 +31,15 @@ export function MenuOpen(props): Override {
 
 export function MenuOverlay(props): Override {
   const opacity = appState.menuOpen ? "1" : "0"
+  const { scrollY } = useScroll()
+
+  const y = useSticky(scrollY, [0, 9999999])
   return {
     onTap: () => {
-      appState.menuOpen = !appState.menuOpen
+      appState.menuOpen = false
     },
-    opacity
+    opacity,
+    y
   }
 }
 
