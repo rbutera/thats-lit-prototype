@@ -2,6 +2,7 @@ const SOURCE_URL =
   "https://api.airtable.com/v0/appzWIcmWWhnfUEtf/Prototype?api_key=keyD9WDUfMMgSQkg0&maxRecords=3&sort%5B0%5D%5Bfield%5D=Date&sort%5B0%5D%5Bdirection%5D=desc"
 
 import * as React from "react"
+import { useState } from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
 import styled from "styled-components"
 
@@ -33,12 +34,16 @@ const Section = styled.div`
 export function RecentRecommendations(props) {
   const items = useAirTable(SOURCE_URL)
 
+  const [currentlyTappedIndex, setCurrentlyTappedIndex] = useState(-1)
+
   return (
     <Section>
       {items.map((record, index) => (
         <Recommendation
           height={375}
           key={index}
+          onClick={() => setCurrentlyTappedIndex(index)}
+          flipped={currentlyTappedIndex === index}
           {...normalizeFields(record.fields)}
         />
       ))}

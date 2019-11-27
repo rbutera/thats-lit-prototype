@@ -3,6 +3,7 @@
 	"license": "MIT",
 	"devDependencies": {
 		"@framer/framer.device-skin-apple-iphone-xs-gold": "^1.0.0",
+		"@framer/framer.device-skin-apple-iphone-xs-silver": "^1.0.0",
 		"@types/react": "^16.8"
 	},
 	"peerDependencies": {
@@ -15,6 +16,7 @@
 	"author": "Raimondo Butera",
 	"dependencies": {
 		"@framer/aroagb.airtable": "^1.5.0",
+		"@framer/benjamin.easing-gradient": "^1.1.0",
 		"@framer/benjamin.grid": "^1.10.0",
 		"@framer/colebemis.feather-icons": "^1.2.0",
 		"@framer/davo.airtable-sync": "^1.11.0",
@@ -28,6 +30,8 @@
 		"@framer/perrysmotors.sticky-headers": "^2.3.0",
 		"@framer/steveruizok.education": "^1.207.0",
 		"@framer/steveruizok.fontloader": "^1.7.0",
+		"@popmotion/popcorn": "^0.4.4",
+		"framer-motion": "^1.6.17",
 		"ramda": "^0.26.1",
 		"styled-components": "^4.4.1"
 	}

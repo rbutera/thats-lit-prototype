@@ -97,6 +97,7 @@ const Tagline = styled.div`
   line-height: 12pt;
   color: white;
   margin-top: 4pt;
+  width: 75%;
   opacity: ${props => {
     return props.opacity
   }};
@@ -165,13 +166,10 @@ const CardBlur = styled.div`
 `
 
 export function Recommendation(props) {
-  const { name, tagline, picture, category, height } = props
-
-  const [flipped, setFlipped] = useState(false)
-  const toggleFlipped = () => setFlipped(!flipped)
+  const { name, tagline, picture, category, height, flipped, onClick } = props
 
   return (
-    <RecCard height={height + "px"} picture={picture} onClick={toggleFlipped}>
+    <RecCard height={height + "px"} picture={picture} onClick={onClick}>
       <CardContent>
         {" "}
         <CardHeader>

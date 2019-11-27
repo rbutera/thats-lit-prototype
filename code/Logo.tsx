@@ -24,6 +24,7 @@ const TextEffects = styled.h1`
   width: 100%;
   /* line-height: 1rem; */
   letter-spacing: -1pt;
+  text-shadow: 2pt 2pt 1pt rgba(0, 0, 0, 0.2);
   margin: 0;
   padding: 0;
   position: relative;

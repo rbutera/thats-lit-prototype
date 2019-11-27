@@ -238,6 +238,13 @@
   resolved "https://registry.framer.com/@framer/aroagb.airtable/-/@framer/aroagb.airtable-1.5.0.tgz#c199600352613e9bc828f3678faf36a00d60b781"
   integrity sha512-CxvJSgnnzsLu82uHW68pSs+Ip8HS/lRORfI9tqrh0g0a1+zGbMgv4CFfJceX47PlPWhS/4jCU6qJQPT4kk29LA==
 
+"@framer/benjamin.easing-gradient@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.framer.com/@framer/benjamin.easing-gradient/-/@framer/benjamin.easing-gradient-1.1.0.tgz#50d133e5b84aa3ab5eff46d07be197871317a90f"
+  integrity sha512-k9iM3o1aLsAOnI4/VFl7lcqUoqdH9lfsVXSNEwSqTFbsYFNovZ4HK5+dApykgGhudhF+PpVncApk2dMAh8weJQ==
+  dependencies:
+    easing-coordinates "^2.0.2"
+
 "@framer/benjamin.grid@^1.10.0":
   version "1.10.0"
   resolved "https://registry.framer.com/@framer/benjamin.grid/-/@framer/benjamin.grid-1.10.0.tgz#a740eed0ec389ed4ee80b6c7a5e68c249a2bea74"
@@ -282,6 +289,11 @@
   version "1.0.0"
   resolved "https://registry.framer.com/@framer/framer.device-skin-apple-iphone-xs-gold/-/@framer/framer.device-skin-apple-iphone-xs-gold-1.0.0.tgz#61db13ceaee042e3fdf8e5a2fba41cfba123b4e4"
   integrity sha512-2WZiD0l+lEIvzKWYGElbqmcXRHZJzBtuytIO2e6gWjtoRKBWq+jYPyH6sfvQlFr8dJqbeghWzQgh6TOzat23DQ==
+
+"@framer/framer.device-skin-apple-iphone-xs-silver@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.framer.com/@framer/framer.device-skin-apple-iphone-xs-silver/-/@framer/framer.device-skin-apple-iphone-xs-silver-1.0.0.tgz#2325c3b087d646ec6de446d48e632c841b56d9c1"
+  integrity sha512-jA5mpi38Bn7//J3q8NLctiAvByw82LBGUEhgtt4SP+L3DBDqb8qn89kAcF49hZutaTHtMotIli4cE/bHOSY7vg==
 
 "@framer/guischneider.page-indicators@^1.1.0":
   version "1.1.0"
@@ -731,6 +743,11 @@ earcut@^2.2.0:
   resolved "https://registry.yarnpkg.com/earcut/-/earcut-2.2.1.tgz#3bae0b1b6fec41853b56b126f03a42a34b28f1d5"
   integrity sha512-5jIMi2RB3HtGPHcYd9Yyl0cczo84y+48lgKPxMijliNQaKAHEZJbdzLmKmdxG/mCdS/YD9DQ1gihL8mxzR0F9w==
 
+easing-coordinates@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/easing-coordinates/-/easing-coordinates-2.0.2.tgz#54e5a7f02762b18a0de33460495f6c90a4d0a6b8"
+  integrity sha512-uQpJaLQX2CKVnN27YvN4sL4pXyEFGAv00y4zgrC46H0EBHrDhJc/8OsT2CQ5/6yz6+d+u8ACGd9bo4v83FNVlg==
+
 encoding@^0.1.11:
   version "0.1.12"
   resolved "https://registry.yarnpkg.com/encoding/-/encoding-0.1.12.tgz#538b66f3ee62cd1ab51ec323829d1f9480c74beb"
@@ -822,6 +839,22 @@ framer-motion@^0.15.1:
     popmotion "^8.6.8"
     style-value-types "^3.1.0"
     stylefire "^4.1.0"
+
+framer-motion@^1.6.17:
+  version "1.6.17"
+  resolved "https://registry.yarnpkg.com/framer-motion/-/framer-motion-1.6.17.tgz#d58ff530359d15d808e1141096cec974d0f71984"
+  integrity sha512-4fUJiSvWKRh4hbdC4jy+IZLNVgR/cxsjjOKkAjKpdOWA86CyYL0eDYReBJubRMoZIrTk+iJe96tQwZjMvDHhNw==
+  dependencies:
+    "@popmotion/easing" "^1.0.2"
+    "@popmotion/popcorn" "^0.4.2"
+    framesync "^4.0.4"
+    hey-listen "^1.0.8"
+    popmotion "9.0.0-beta-8"
+    style-value-types "^3.1.6"
+    stylefire "^7.0.0"
+    tslib "^1.10.0"
+  optionalDependencies:
+    "@emotion/is-prop-valid" "^0.8.2"
 
 framer-motion@^1.6.2:
   version "1.6.15"

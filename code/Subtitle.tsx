@@ -4,6 +4,9 @@ import { Frame, addPropertyControls, ControlType } from "framer"
 import styled from "styled-components"
 import { filter } from "ramda"
 
+import { motion, AnimatePresence } from "framer-motion"
+import { wrap } from "@popmotion/popcorn"
+
 import { FONT_STACK } from "./font"
 
 // Open Preview: Command + P
@@ -40,8 +43,10 @@ const SubtitleStyle = styled.div`
   flex-direction: column;
   width: 100%;
   line-height: 1em;
+  color: rgba(0, 0, 0, 0.9);
+  text-shadow: 2pt 2pt 1pt rgba(0, 0, 0, 0.2);
   font-size: 1.618em;
-  opacity: {props => props.opacity}
+  opacity: ${props => props.opacity};
 `
 
 const Line = styled.span`
@@ -62,17 +67,32 @@ export function Shuffler(props) {
     const interval = setInterval(() => {
       const currentOrBlank = current || ""
       const notCurrent = word => word !== currentOrBlank
-      console.log(`current is: ${current}`)
       const otherOptions = filter(notCurrent)(options)
-      console.log(`otherOptions are: ${otherOptions}`)
       const shuffled = shuffle(otherOptions)
-      const [first] = shuffled
-      setCurrent(first)
+      const [first, ...rest] = shuffled
+      const [second, ...tail] = rest
+      if (first !== current) {
+        setCurrent(first)
+      } else {
+        setCurrent(second) // if you're reading this, this is only a prototype and debugging framer components isn't awesome, so this is a hack to mitigate getting the same option twice
+      }
     }, period)
     return () => clearInterval(interval)
   }, [])
 
-  return <span>{current}</span>
+  return (
+    <AnimatePresence exitBeforeEnter>
+      <motion.span
+        key={current}
+        transition={{ duration: 1 }}
+        initial={{ x: -300, opacity: 0, zIndex: 0 }}
+        animate={{ x: 0, opacity: 1, zIndex: 1 }}
+        exit={{ x: 300, opacity: 0, zIndex: 0 }}
+      >
+        {current}
+      </motion.span>
+    </AnimatePresence>
+  )
 }
 
 export function Subtitle(props) {
@@ -97,7 +117,9 @@ export function Subtitle(props) {
     "awesome apps",
     "tomorrow's technology",
     "wavy websites",
-    "slapping songs"
+    "songs that slap",
+    "professional passion",
+    "motivation and muse"
   ]
 
   return (
@@ -113,10 +135,10 @@ export function Subtitle(props) {
     >
       <SubtitleStyle opacity={opacity}>
         <Line>
-          a <Shuffler period={3000} options={firstLineOptions} />
+          a <Shuffler period={4000} options={firstLineOptions} />
         </Line>
         <Line>
-          of <Shuffler period={3000} options={secondLineOptions} />
+          of <Shuffler period={4000} options={secondLineOptions} />
         </Line>
       </SubtitleStyle>
     </Frame>
