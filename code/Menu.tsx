@@ -20,6 +20,12 @@ export function TapFrame(props): Override {
   }
 }
 
+export function StickyMenuButton(props): Override {
+  const { scrollY } = useScroll()
+  const y = useSticky(scrollY, [170, 999999])
+  return { y }
+}
+
 export function MenuOpen(props): Override {
   return {
     onTap: () => {
