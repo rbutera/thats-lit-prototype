@@ -29,8 +29,6 @@ const sidebar = {
 
 export const NavMenu = () => {
   const [isOpen, toggleOpen] = useCycle(false, true)
-  const containerRef = useRef(null)
-  const { height } = useDimensions(containerRef)
 
   return (
     <motion.nav
@@ -38,26 +36,8 @@ export const NavMenu = () => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
-      style={{
-        position: "absolute",
-        top: 0,
-        left: 0,
-        bottom: 0,
-        width: "300px"
-      }}
     >
-      <motion.div
-        className="background"
-        variants={sidebar}
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          bottom: 0,
-          width: "300px",
-          background: "#fff"
-        }}
-      />
+      <motion.div className="background" variants={sidebar} />
       <Navigation />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
