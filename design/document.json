@@ -2502,16 +2502,15 @@
                 "__class" : "CodeComponentNode",
                 "aspectRatio" : null,
                 "bottom" : null,
-                "centerAnchorX" : 0.90400000000000003,
-                "centerAnchorY" : 0.056692913385826771,
+                "centerAnchorX" : 0.83199999999999996,
+                "centerAnchorY" : 0.049606299212598425,
                 "children" : [
 
                 ],
                 "clip" : true,
                 "codeComponentIdentifier" : ".\/NavMenu.tsx_NavMenu",
                 "codeComponentProps" : {
-                  "text" : "Hello Framer!",
-                  "tint" : "#0099ff"
+
                 },
                 "codeOverrideEnabled" : false,
                 "constraintsLocked" : false,
@@ -2527,7 +2526,7 @@
                 "fillImagePixelWidth" : null,
                 "fillImageResize" : "fill",
                 "fillType" : "color",
-                "height" : 60,
+                "height" : 51,
                 "heightType" : 0,
                 "id" : "NHYt7Opbm",
                 "intrinsicHeight" : 128,
@@ -2550,7 +2549,7 @@
                 "rotation" : 0,
                 "top" : 6,
                 "visible" : true,
-                "width" : 60,
+                "width" : 114,
                 "widthType" : 0
               }
             ],

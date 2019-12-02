@@ -1,48 +1,51 @@
 import * as React from "react"
+import { useState } from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
+import styled from "styled-components"
+import MenuToggle from "./MenuToggle"
 
-// Open Preview: Command + P
-// Learn more: https://framer.com/api
+const MenuButton = styled.div`
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.2);
+`
+
+const Bar = styled.figure`
+  background-color: ${props => props.color};
+  display: block;
+  width: 32px;
+  height: 4px;
+  margin: 5px auto;
+  border-radius: 2px;
+  transition: all 0.4s linear 0.1s;
+  &:first-child {
+    margin-top: 4px;
+  }
+`
+
+const IconWrapper = styled.div`
+  margin: pt;
+  padding: 0;
+  max-width: 30px;
+`
 
 export function NavMenu(props) {
-  const { text, tint, ...rest } = props
+  const { ...rest } = props
+
+  const [open, setOpen] = useState(false)
+
+  const toggleOpen = () => {
+    setOpen(!open)
+  }
 
   return (
-    <Frame
-      {...rest}
-      background={tint}
-      whileHover={{
-        scale: 1.1
-      }}
-      style={{
-        color: "#1b1b1b",
-        fontSize: 16,
-        fontWeight: 600,
-        borderRadius: "100%"
-      }}
-    >
-      {text}
+    <Frame background="none" {...rest}>
+      <MenuToggle toggle={() => toggleOpen()}></MenuToggle>
     </Frame>
   )
 }
 
-NavMenu.defaultProps = {
-  height: 128,
-  width: 240,
-  text: "Get started!",
-  tint: "#0099ff"
-}
-
-// Learn more: https://framer.com/api/property-controls/
-addPropertyControls(NavMenu, {
-  text: {
-    title: "Text",
-    type: ControlType.String,
-    defaultValue: "Hello Framer!"
-  },
-  tint: {
-    title: "Tint",
-    type: ControlType.Color,
-    defaultValue: "#0099ff"
-  }
-})
+NavMenu.defaultProps = {}
