@@ -176,7 +176,7 @@ export function Recommendation(props) {
           <Caption>
             <Category>{category}</Category>
             <Name>{name}</Name>
-            <Tagline opacity={flipped ? 1 : 0}>{tagline}</Tagline>
+            <Tagline>{tagline}</Tagline>
           </Caption>
           <Spacer />
         </CardHeader>

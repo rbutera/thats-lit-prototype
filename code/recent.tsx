@@ -29,15 +29,17 @@ const Section = styled.div`
   flex-direction: column;
   justify-items: flex-start;
   align-items: center;
+  opacity: ${props => props.opacity};
 `
 
 export function RecentRecommendations(props) {
   const items = useAirTable(SOURCE_URL)
+  const { opacity } = props
 
   const [currentlyTappedIndex, setCurrentlyTappedIndex] = useState(-1)
 
   return (
-    <Section>
+    <Section opacity={opacity}>
       {items.map((record, index) => (
         <Recommendation
           height={375}

@@ -44,8 +44,8 @@ const SubtitleStyle = styled.div`
   width: 100%;
   line-height: 1em;
   color: rgba(0, 0, 0, 0.9);
-  text-shadow: 2pt 2pt 1pt rgba(0, 0, 0, 0.2);
-  font-size: 1.618em;
+  text-shadow: 1pt 1pt 1pt rgba(0, 0, 0, 0.1);
+  font-size: 1.337rem;
   opacity: ${props => props.opacity};
 `
 

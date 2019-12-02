@@ -9,15 +9,16 @@ import styled from "styled-components"
 const Heading = styled.h1`
   display: inline-block;
   background: rgba(0, 0, 0, 0.5);
-  padding: 4pt 8pt;
-  border-radius: 2pt;
-  font-size: 1.5rem;
+  padding: 4pt 12pt;
+  border-radius: 16pt;
+  font-size: 1.618rem;
   line-height: 1.8rem;
   vertical-align: middle;
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 8pt;
-  margin-right: 8pt;
+  margin-left: 2pt;
+  margin-right: 2pt;
+
   text-transform: uppercase;
   letter-spacing: 1.618pt;
   backdrop-filter: invert(1) brightness(0.1);

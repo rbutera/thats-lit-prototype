@@ -97,7 +97,7 @@ export function StickySubheading3(): Override {
 
 export function RecentFadeOutOnScroll(): Override {
   const { scrollY } = useScroll()
-  const opacity = useTransform(scrollY, [100, 500], [0, 1])
+  const opacity = useTransform(scrollY, [100, 500], [1, 0])
   return { opacity }
 }
 

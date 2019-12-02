@@ -15,7 +15,7 @@ export function NavMenu(props) {
         scale: 1.1
       }}
       style={{
-        color: "#fff",
+        color: "#1b1b1b",
         fontSize: 16,
         fontWeight: 600,
         borderRadius: "100%"
