@@ -1,50 +1,66 @@
 import * as React from "react"
-import { useState } from "react"
+import { useState, useRef } from "react"
 import { Frame, addPropertyControls, ControlType } from "framer"
+import { motion, useCycle } from "framer-motion"
 import styled from "styled-components"
 import MenuToggle from "./MenuToggle"
+import { Navigation } from "./Navigation"
+import { useDimensions } from "./useDimensions"
 
-const MenuButton = styled.div`
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: flex-end;
-  align-items: center;
-  background: rgba(0, 0, 0, 0.2);
-`
-
-const Bar = styled.figure`
-  background-color: ${props => props.color};
-  display: block;
-  width: 32px;
-  height: 4px;
-  margin: 5px auto;
-  border-radius: 2px;
-  transition: all 0.4s linear 0.1s;
-  &:first-child {
-    margin-top: 4px;
+const sidebar = {
+  open: (height = 1000) => ({
+    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+    transition: {
+      type: "spring",
+      stiffness: 20,
+      restDelta: 2
+    }
+  }),
+  closed: {
+    clipPath: "circle(30px at 40px 40px)",
+    transition: {
+      delay: 0.5,
+      type: "spring",
+      stiffness: 400,
+      damping: 40
+    }
   }
-`
+}
 
-const IconWrapper = styled.div`
-  margin: pt;
-  padding: 0;
-  max-width: 30px;
-`
-
-export function NavMenu(props) {
-  const { ...rest } = props
-
-  const [open, setOpen] = useState(false)
-
-  const toggleOpen = () => {
-    setOpen(!open)
-  }
+export const NavMenu = () => {
+  const [isOpen, toggleOpen] = useCycle(false, true)
+  const containerRef = useRef(null)
+  const { height } = useDimensions(containerRef)
 
   return (
-    <Frame background="none" {...rest}>
-      <MenuToggle toggle={() => toggleOpen()}></MenuToggle>
-    </Frame>
+    <motion.nav
+      initial={false}
+      animate={isOpen ? "open" : "closed"}
+      custom={height}
+      ref={containerRef}
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        bottom: 0,
+        width: "300px"
+      }}
+    >
+      <motion.div
+        className="background"
+        variants={sidebar}
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          bottom: 0,
+          width: "300px",
+          background: "#fff"
+        }}
+      />
+      <Navigation />
+      <MenuToggle toggle={() => toggleOpen()} />
+    </motion.nav>
   )
 }
 

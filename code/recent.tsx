@@ -16,7 +16,8 @@ function normalizeFields(fields) {
     name: Name,
     tagline: Tagline,
     category: Subcat,
-    picture: Picture[0]["thumbnails"]["large"]["url"]
+    picture:
+      Picture && Picture[0] ? Picture[0]["thumbnails"]["large"]["url"] : ""
   }
 
   return result
